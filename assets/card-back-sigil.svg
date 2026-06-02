@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+<title>Belladonna Card Back Sigil</title>
+<desc>A gothic sigil with crescent moon, rose, thorns, and star.</desc>
+<defs>
+  <linearGradient id="gold" x1="0" x2="1"><stop offset="0%" stop-color="#ebd08e"/><stop offset="100%" stop-color="#b7893e"/></linearGradient>
+  <radialGradient id="rose" cx="50%" cy="45%" r="55%"><stop offset="0%" stop-color="#ff6b7a"/><stop offset="50%" stop-color="#c81831"/><stop offset="100%" stop-color="#6f0816"/></radialGradient>
+</defs>
+<rect width="400" height="400" rx="36" fill="none"/>
+<circle cx="200" cy="200" r="146" fill="none" stroke="url(#gold)" stroke-width="5" opacity=".85"/>
+<circle cx="200" cy="200" r="122" fill="none" stroke="#c9a45f" stroke-width="1.5" opacity=".4"/>
+<path d="M157 145a63 63 0 1 0 57-91 87 87 0 1 1-57 91z" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
+<g fill="none" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round">
+  <path d="M200 118v164"/>
+  <path d="M118 200h164"/>
+  <path d="M144 144l112 112"/>
+  <path d="M256 144L144 256"/>
+</g>
+<g transform="translate(200 204)">
+  <path d="M0-66c-21 12-39 31-48 56 10-8 22-15 35-20-8 15-12 34-12 53 9-15 21-29 36-39 2 18 9 34 20 49 7-18 8-39 2-58 14 10 26 23 34 38-1-30-13-58-35-80-11 1-22 2-32 1z" fill="url(#rose)" stroke="#f0a4af" stroke-width="1.6"/>
+  <path d="M0 70c-6 16-14 29-24 41 12-4 24-6 36-6 10 0 21 2 31 6-9-11-17-24-23-41z" fill="#7f0a19" stroke="#cf5b68" stroke-width="1.6"/>
+</g>
+<g fill="#c9a45f" opacity=".92">
+  <path d="M200 38l7 18 19 1-15 11 5 18-16-10-16 10 5-18-15-11 19-1z"/>
+  <path d="M200 314l5 12 13 1-10 8 3 12-11-7-11 7 3-12-10-8 13-1z" opacity=".75"/>
+</g>
+<path d="M104 278c30-16 55-23 96-23s66 7 96 23" fill="none" stroke="#c9a45f" stroke-width="3" opacity=".8"/>
+</svg>

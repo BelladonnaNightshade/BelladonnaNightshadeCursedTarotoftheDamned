@@ -1,0 +1,16 @@
+{
+  "name": "Belladonna Nightshade\u2019s Cursed Tarot of the Damned",
+  "short_name": "Belladonna Tarot",
+  "description": "A gothic Major Arcana tarot webapp featuring Belladonna Nightshade.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#090407",
+  "theme_color": "#16080d",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
