@@ -1,7 +1,7 @@
 const spreads = [
   { id:'mirror', title:'The Crimson Mirror', action:'Look Into the Mirror', purpose:'Self-deception, secrets, hidden motives.', slots:['What you believe','What you refuse to see','What is actually true'] },
   { id:'coffin', title:'The Coffin Spread', action:'Open the Coffin', purpose:'Endings, transformation, toxic attachments.', slots:['What must die','What refuses to stay buried','What rises next'] },
-  { id:'judgment', title:'The Vampire Queen’s Judgment', action:'Receive Judgment', purpose:'Conflict, betrayal, moral clarity, power struggles.', slots:['The accusation','The hidden motive','The blood price','The verdict'] },
+  { id:'judgment', title:'The Vampire Queen’s Judgement', action:'Receive Judgement', purpose:'Conflict, betrayal, moral clarity, power struggles.', slots:['The accusation','The hidden motive','The blood price','The verdict'] },
   { id:'rose', title:'The Black Rose Spread', action:'Pluck the Rose', purpose:'Romance, obsession, attraction, and desire.', slots:['The desire','The thorn','The blood','The bloom'] },
   { id:'bargain', title:'The Midnight Bargain', action:'Make the Bargain', purpose:'Choices, consequences, ambition, temptation.', slots:['What you want','What it will cost','Who benefits','What you become if you accept'] },
   { id:'enemy', title:'The Enemy at the Door', action:'Name the Enemy', purpose:'Rivalry, manipulation, hidden opposition, survival.', slots:['The face they show','The weapon they hide','The weakness they fear','How to survive them'] }
