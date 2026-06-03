@@ -24,6 +24,7 @@ function renderReading(target, pulls, options = {}) {
           <div class="flip-inner">
             <div class="flip-face flip-back">
               <img class="card-back-full" src="assets/card-back.png" alt="Belladonna tarot card back">
+              <span class="card-back-reveal">Click to reveal</span>
             </div>
             <div class="flip-face flip-front ${isRev ? 'reversed' : ''}">
               <img src="${card.image}" alt="${card.name}">
