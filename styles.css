@@ -185,24 +185,18 @@ input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,164,95,.08)}
     radial-gradient(circle at top, rgba(185,21,42,.14), transparent 32%),
     linear-gradient(180deg, rgba(14,6,10,.97), rgba(34,9,16,.98));
   position:absolute;
+  padding:0;
+  overflow:hidden;
 }
-.flip-back::before{
-  content:"";
-  position:absolute;
-  inset:12px;
-  border-radius:16px;
-  border:1px solid rgba(201,164,95,.35);
-  background:
-    radial-gradient(circle at center, rgba(201,164,95,.06), transparent 34%),
-    repeating-linear-gradient(45deg, transparent 0 16px, rgba(255,255,255,.02) 16px 17px);
+
+.card-back-full{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:22px;
 }
-.flip-back::after{
-  content:"";
-  position:absolute;
-  inset:26px;
-  border-radius:12px;
-  border:1px solid rgba(201,164,95,.18);
-}
+
 .card-back-art{
   position:relative;
   z-index:1;

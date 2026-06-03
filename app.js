@@ -23,13 +23,7 @@ function renderReading(target, pulls, options = {}) {
         <button class="flip-card ${concealed ? '' : 'revealed'}" ${concealed ? '' : 'data-static="true"'}>
           <div class="flip-inner">
             <div class="flip-face flip-back">
-              <div class="card-back-art">
-                <div class="back-top">Belladonna</div>
-                <div class="back-sigil">✦ ☾ ✦</div>
-                <img class="back-emblem" src="assets/card-back-sigil.svg" alt="">
-                <div class="back-instruction">Click to reveal</div>
-                <div class="back-bottom">Cursed Tarot</div>
-              </div>
+              <img class="card-back-full" src="assets/card-back.png" alt="Belladonna tarot card back">
             </div>
             <div class="flip-face flip-front ${isRev ? 'reversed' : ''}">
               <img src="${card.image}" alt="${card.name}">
