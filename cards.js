@@ -473,13 +473,461 @@ const bloodChalicesCards = [
   }
 ];
 
+const cursedWandsCards = [
+  {
+    "id": "wands-ace",
+    "sort": 1,
+    "roman": "Ace",
+    "name": "Ace of Cursed Wands",
+    "image": "cards/cursed-wands/ace.jpg",
+    "keywords": [
+      "ignition",
+      "ambition",
+      "inspiration",
+      "willpower",
+      "magic",
+      "creative fire",
+      "passion",
+      "beginning"
+    ],
+    "core": "New passion, inspiration, creative spark, action, potential.",
+    "visual": "A single blackened wand erupts from cracked stone, wrapped in black rose thorns and glowing with crimson fire. Smoke rises from the tip as if the wand has just awakened.",
+    "upright": "The first spark of will. A new ambition, spell, passion, creative force, or act of command begins. This is raw power before it has been shaped. It may become art, conquest, desire, or ruin. The Ace of Cursed Wands says the fire has been lit. The question is whether you will direct it or be consumed by it.",
+    "verdict": "The wand has awakened. Now prove your hand is worthy of holding it.",
+    "reversed": "The spark fails, misfires, or burns in the wrong direction. This may show blocked creativity, impotence of will, wasted passion, false starts, or a curse released before the caster understands it.",
+    "reversedKeywords": [
+      "blocked will",
+      "failed start",
+      "wasted passion",
+      "misfire",
+      "creative impotence",
+      "cursed beginning"
+    ],
+    "reversedVerdict": "A weak flame still burns the fool who mistakes it for a crown."
+  },
+  {
+    "id": "wands-two",
+    "sort": 2,
+    "roman": "Two",
+    "name": "Two of Cursed Wands",
+    "image": "cards/cursed-wands/two.jpg",
+    "keywords": [
+      "planning",
+      "vision",
+      "choice",
+      "ambition",
+      "strategy",
+      "dominion",
+      "future power"
+    ],
+    "core": "Planning, vision, choice, future direction, personal power.",
+    "visual": "Belladonna stands on a high balcony holding one black wand while another burns behind her. Below her, roads, kingdoms, or battlefields stretch into darkness.",
+    "upright": "Power begins to look outward. You have force, but now you must choose where to send it. This card is strategy, planning, ambition, and the moment before expansion. The Two of Cursed Wands asks whether your vision is large enough for your hunger.",
+    "verdict": "You have looked beyond the window. Now decide which horizon deserves your shadow.",
+    "reversed": "Fear of expansion, weak planning, domination without direction, or ambition trapped inside fantasy. This card may show someone who wants power but cannot choose a path, or someone who mistakes brooding for strategy.",
+    "reversedKeywords": [
+      "indecision",
+      "fear",
+      "weak vision",
+      "wasted ambition",
+      "hesitation",
+      "fantasy of power"
+    ],
+    "reversedVerdict": "A throne imagined too long becomes a chair in a prison cell."
+  },
+  {
+    "id": "wands-three",
+    "sort": 3,
+    "roman": "Three",
+    "name": "Three of Cursed Wands",
+    "image": "cards/cursed-wands/three.jpg",
+    "keywords": [
+      "expansion",
+      "progress",
+      "foresight",
+      "waiting",
+      "ambition abroad",
+      "strategy",
+      "return"
+    ],
+    "core": "Expansion, foresight, progress, waiting for results.",
+    "visual": "Three cursed wands stand like burning standards before a dark sea or battlefield. Belladonna watches distant ships, armies, or messengers returning under a blood-red sky.",
+    "upright": "Ambition has been released into the world. Now you wait for its return. This card is expansion, foresight, calculated risk, and watching your will travel beyond your immediate reach. The Three of Cursed Wands suggests your power is no longer private. It has entered the world and begun to shape events.",
+    "verdict": "You sent your desire into the dark. Now listen for what comes back wearing its face.",
+    "reversed": "Plans fail, messages are delayed, ambition overextends, or the world refuses to obey. This may show failed expansion, arrogance, bad timing, or a strategy that relied too heavily on control.",
+    "reversedKeywords": [
+      "delay",
+      "failed expansion",
+      "arrogance",
+      "bad timing",
+      "overreach",
+      "blocked progress"
+    ],
+    "reversedVerdict": "The world did not betray your plan. Your plan mistook the world for a servant."
+  },
+  {
+    "id": "wands-four",
+    "sort": 4,
+    "roman": "Four",
+    "name": "Four of Cursed Wands",
+    "image": "cards/cursed-wands/four.jpg",
+    "keywords": [
+      "ceremony",
+      "celebration",
+      "victory",
+      "house",
+      "stability",
+      "ritual",
+      "recognition",
+      "threshold"
+    ],
+    "core": "Celebration, stability, homecoming, ceremony, foundation.",
+    "visual": "Four cursed wands form a ritual arch above a vampire court celebration, dark wedding, victory feast, or castle threshold lit by crimson candles.",
+    "upright": "Power becomes ceremony. This card is celebration, victory, ritual, household fire, and the establishment of a place where your will can rest and be recognized. In Belladonna’s deck, the Four of Cursed Wands may be a wedding, a coronation, a pact, a feast, or a dark house opening its doors.",
+    "verdict": "Every house is built around a fire. Be certain you know what it is burning.",
+    "reversed": "The ceremony curdles. Home becomes a stage. Celebration becomes performance. This card may show false stability, family tension, broken vows, failed rituals, or a house held together by fear.",
+    "reversedKeywords": [
+      "false stability",
+      "broken ceremony",
+      "failed ritual",
+      "tension",
+      "false celebration",
+      "unstable home"
+    ],
+    "reversedVerdict": "A banquet can still be a battlefield if everyone arrives armed with smiles."
+  },
+  {
+    "id": "wands-five",
+    "sort": 5,
+    "roman": "Five",
+    "name": "Five of Cursed Wands",
+    "image": "cards/cursed-wands/five.jpg",
+    "keywords": [
+      "conflict",
+      "rivalry",
+      "competition",
+      "struggle",
+      "testing",
+      "clashing wills",
+      "challenge"
+    ],
+    "core": "Conflict, rivalry, competition, struggle, clashing wills.",
+    "visual": "Five cursed wands clash in a ritual garden or battlefield. Sparks fly. The figures may be dueling, casting, or fighting for dominance.",
+    "upright": "Wills collide. This card is rivalry, competition, conflict, and the testing of power against power. Not all struggle is destructive. Some fires grow stronger when opposed. The Five of Cursed Wands asks whether the conflict sharpens you or merely entertains your ego.",
+    "verdict": "If you cannot survive another flame, you were never fire.",
+    "reversed": "Conflict becomes petty, ugly, cowardly, or pointless. This card may show sabotage, ego wars, infighting, bullying, theatrical aggression, or people fighting because they have forgotten what victory means.",
+    "reversedKeywords": [
+      "sabotage",
+      "pettiness",
+      "ego",
+      "bullying",
+      "chaos",
+      "pointless conflict",
+      "ugly rivalry"
+    ],
+    "reversedVerdict": "Not every battle is war. Some are only children stabbing the dark with sticks."
+  },
+  {
+    "id": "wands-six",
+    "sort": 6,
+    "roman": "Six",
+    "name": "Six of Cursed Wands",
+    "image": "cards/cursed-wands/six.jpg",
+    "keywords": [
+      "victory",
+      "recognition",
+      "success",
+      "praise",
+      "triumph",
+      "public power",
+      "confidence"
+    ],
+    "core": "Victory, recognition, public success, triumph, confidence.",
+    "visual": "Belladonna rides or stands before a crowd, holding a cursed wand like a victory scepter. Red banners, black roses, and candlelight surround her.",
+    "upright": "The will is recognized. This card is triumph, public victory, praise, command, and the dangerous pleasure of being seen as powerful. The Six of Cursed Wands rewards boldness, but warns that every victory teaches others where your power lives.",
+    "verdict": "Accept the applause. Then count how many hands are hiding knives.",
+    "reversed": "Victory becomes vanity, public shame, false praise, arrogance, or collapse after recognition. This card may show humiliation, failure, fragile ego, or a person addicted to applause.",
+    "reversedKeywords": [
+      "vanity",
+      "humiliation",
+      "false praise",
+      "arrogance",
+      "fragile ego",
+      "public failure"
+    ],
+    "reversedVerdict": "Applause is only thunder from people who may leave before the rain."
+  },
+  {
+    "id": "wands-seven",
+    "sort": 7,
+    "roman": "Seven",
+    "name": "Seven of Cursed Wands",
+    "image": "cards/cursed-wands/seven.jpg",
+    "keywords": [
+      "defense",
+      "resistance",
+      "challenge",
+      "pressure",
+      "courage",
+      "position",
+      "perseverance"
+    ],
+    "core": "Defense, resistance, perseverance, standing one’s ground.",
+    "visual": "Belladonna stands on a high stone platform, one cursed wand raised against six others rising from below like challengers or accusing spears.",
+    "upright": "Power must be defended. This card represents resistance, pressure, challenge, and the need to stand your ground when rivals, enemies, or lesser wills rise against you. The Seven of Cursed Wands says your position is valuable because it is contested.",
+    "verdict": "If they rise against you, at least you know you are standing above them.",
+    "reversed": "The defense fails or becomes paranoia. This card may show exhaustion, cowardice, over-defensiveness, being overwhelmed, or mistaking every question for an attack.",
+    "reversedKeywords": [
+      "paranoia",
+      "exhaustion",
+      "cowardice",
+      "overwhelm",
+      "collapse",
+      "insecurity",
+      "defensiveness"
+    ],
+    "reversedVerdict": "A throne defended from ghosts becomes a coffin."
+  },
+  {
+    "id": "wands-eight",
+    "sort": 8,
+    "roman": "Eight",
+    "name": "Eight of Cursed Wands",
+    "image": "cards/cursed-wands/eight.jpg",
+    "keywords": [
+      "speed",
+      "momentum",
+      "messages",
+      "acceleration",
+      "movement",
+      "swift action",
+      "spell in motion"
+    ],
+    "core": "Speed, movement, messages, rapid action, momentum.",
+    "visual": "Eight burning wands streak across a dark sky like cursed comets, spell missiles, or fiery commands sent across the night.",
+    "upright": "The spell is in motion. Events accelerate. Messages arrive. Passion moves quickly. The Eight of Cursed Wands is speed, momentum, magical transmission, and consequences traveling faster than regret. This card tells you that the will has been released and cannot easily be recalled.",
+    "verdict": "Once the curse leaves your lips, do not ask it to walk slowly.",
+    "reversed": "Momentum turns chaotic. Messages misfire. Passion becomes panic. This card may show delays, confusion, scattered force, reckless speed, or consequences arriving before you are ready.",
+    "reversedKeywords": [
+      "delay",
+      "chaos",
+      "misfire",
+      "panic",
+      "scattered energy",
+      "reckless speed",
+      "confusion"
+    ],
+    "reversedVerdict": "The arrow does not forgive you because you changed your mind after release."
+  },
+  {
+    "id": "wands-nine",
+    "sort": 9,
+    "roman": "Nine",
+    "name": "Nine of Cursed Wands",
+    "image": "cards/cursed-wands/nine.jpg",
+    "keywords": [
+      "endurance",
+      "resilience",
+      "suspicion",
+      "guarded power",
+      "survival",
+      "persistence",
+      "wounded strength"
+    ],
+    "core": "Resilience, endurance, wounded strength, guarded persistence.",
+    "visual": "A wounded figure stands behind nine cursed wands like a defensive barrier. Belladonna watches with blood on her lip, still unbowed.",
+    "upright": "The will survives injury. This card is endurance, suspicion, resilience, guarded strength, and the refusal to fall after being burned, betrayed, or challenged. The Nine of Cursed Wands is not peace. It is survival with one hand still on the weapon.",
+    "verdict": "You are not unbroken. You are still standing. Sometimes that is more frightening.",
+    "reversed": "Endurance curdles into paranoia, exhaustion, bitterness, or collapse. This card may show someone so wounded that every future becomes an enemy, or a person who keeps fighting after the war has ended.",
+    "reversedKeywords": [
+      "paranoia",
+      "exhaustion",
+      "bitterness",
+      "collapse",
+      "trauma",
+      "defensiveness",
+      "spiritual fatigue"
+    ],
+    "reversedVerdict": "A wound worshiped long enough becomes a god."
+  },
+  {
+    "id": "wands-ten",
+    "sort": 10,
+    "roman": "Ten",
+    "name": "Ten of Cursed Wands",
+    "image": "cards/cursed-wands/ten.jpg",
+    "keywords": [
+      "burden",
+      "exhaustion",
+      "responsibility",
+      "overextension",
+      "pressure",
+      "duty",
+      "ambition’s cost"
+    ],
+    "core": "Burden, responsibility, overwork, oppression, carrying too much.",
+    "visual": "A figure carries ten cursed wands through smoke and ash, bleeding from thorns and flame. The bundle is both treasure and punishment.",
+    "upright": "Ambition has become heavy. This card is burden, responsibility, exhaustion, overextension, and the cost of carrying power too long without release. The Ten of Cursed Wands asks whether the load is still serving your will, or whether your will has become a servant of the load.",
+    "verdict": "You wanted power. Do not act surprised when it has weight.",
+    "reversed": "The burden becomes bondage. This card may show collapse, exploitation, slavery to ambition, refusal to delegate, martyrdom, or being crushed by the very power once desired.",
+    "reversedKeywords": [
+      "collapse",
+      "bondage",
+      "exploitation",
+      "burnout",
+      "martyrdom",
+      "crushing responsibility",
+      "trapped ambition"
+    ],
+    "reversedVerdict": "A crown carried on the back is only another kind of chain."
+  },
+  {
+    "id": "wands-acolyte",
+    "sort": 11,
+    "roman": "Acolyte",
+    "name": "Acolyte of Cursed Wands",
+    "image": "cards/cursed-wands/acolyte.jpg",
+    "keywords": [
+      "discovery",
+      "enthusiasm",
+      "young ambition",
+      "first spell",
+      "curiosity",
+      "spark",
+      "creative beginning"
+    ],
+    "core": "Page of Wands — enthusiasm, discovery, creative spark, message, young fire.",
+    "visual": "A young occult student holds a blackened wand that sparks crimson flame for the first time. Their eyes reflect wonder and danger.",
+    "upright": "The Acolyte is the first awakening of fire. This card represents young ambition, creative curiosity, magical discovery, enthusiasm, and the first dangerous taste of power.",
+    "verdict": "The first spell is never small to the hand that casts it.",
+    "reversed": "Immaturity, reckless magic, arrogance without skill, wasted enthusiasm, false confidence, or the childish need to prove one has power.",
+    "reversedKeywords": [
+      "immaturity",
+      "recklessness",
+      "false confidence",
+      "wasted spark",
+      "arrogance",
+      "impatience"
+    ],
+    "reversedVerdict": "A child with a wand can still burn down a kingdom."
+  },
+  {
+    "id": "wands-hunter",
+    "sort": 12,
+    "roman": "Hunter",
+    "name": "Hunter of Cursed Wands",
+    "image": "cards/cursed-wands/hunter.jpg",
+    "keywords": [
+      "action",
+      "passion",
+      "conquest",
+      "pursuit",
+      "boldness",
+      "speed",
+      "adventure",
+      "risk"
+    ],
+    "core": "Knight of Wands — action, passion, adventure, speed, boldness, recklessness.",
+    "visual": "A vampire hunter or dark rider charges through a burning field carrying a cursed wand like a spear of crimson fire.",
+    "upright": "The Hunter pursues the fire. This card represents bold action, conquest, passion, risk, movement, and the thrill of chasing desire before fear can interrupt.",
+    "verdict": "Some doors only open for those who arrive like flame.",
+    "reversed": "Recklessness, lust for conquest, impatience, violence, arrogance, destructive passion, or charging forward because stopping would reveal emptiness.",
+    "reversedKeywords": [
+      "recklessness",
+      "violence",
+      "impatience",
+      "arrogance",
+      "destructive passion",
+      "rash action"
+    ],
+    "reversedVerdict": "He calls it courage because he has never survived stillness."
+  },
+  {
+    "id": "wands-queen",
+    "sort": 13,
+    "roman": "Queen",
+    "name": "Queen of Cursed Wands",
+    "image": "cards/cursed-wands/queen.jpg",
+    "keywords": [
+      "charisma",
+      "confidence",
+      "magnetism",
+      "sorcery",
+      "command",
+      "independence",
+      "creative fire"
+    ],
+    "core": "Queen of Wands — confidence, charisma, independence, warmth, magnetism, creative power.",
+    "visual": "Belladonna sits among black roses and crimson candles, holding a cursed wand like a scepter. A familiar or shadow creature waits at her feet.",
+    "upright": "The Queen of Cursed Wands is magnetic command. She rules through charisma, beauty, confidence, creative fire, sorcery, and the ability to make others orbit her flame. She is passion disciplined into presence.",
+    "verdict": "She does not chase the room. The room rearranges itself around her heat.",
+    "reversed": "Jealousy, domination, vanity, possessiveness, magical cruelty, theatrical rage, or charisma used to consume rather than inspire.",
+    "reversedKeywords": [
+      "jealousy",
+      "vanity",
+      "domination",
+      "rage",
+      "possessiveness",
+      "cruel charisma",
+      "manipulation"
+    ],
+    "reversedVerdict": "A dying fire grows loud when it can no longer warm anyone."
+  },
+  {
+    "id": "wands-sovereign",
+    "sort": 14,
+    "roman": "Sovereign",
+    "name": "Sovereign of Cursed Wands",
+    "image": "cards/cursed-wands/sovereign.jpg",
+    "keywords": [
+      "leadership",
+      "mastery",
+      "command",
+      "vision",
+      "ambition",
+      "disciplined fire",
+      "authority"
+    ],
+    "core": "King of Wands — leadership, vision, mastery, command, entrepreneurial power.",
+    "visual": "A dark sovereign sits on a throne of charred wood and blackened roses, holding a blazing cursed wand. Behind him, banners burn without being consumed.",
+    "upright": "The Sovereign of Cursed Wands is mastery of will. This card represents leadership, command, vision, ambition, disciplined fire, and the ability to make desire into law. He does not merely act. He directs action.",
+    "verdict": "The true ruler does not burn everything. He decides what must remain warm enough to obey.",
+    "reversed": "Tyranny, domination, rage, arrogance, abusive leadership, cruelty, burned-out ambition, or a ruler who confuses fear with loyalty.",
+    "reversedKeywords": [
+      "tyranny",
+      "arrogance",
+      "abuse",
+      "rage",
+      "cruelty",
+      "domination",
+      "false leadership"
+    ],
+    "reversedVerdict": "A tyrant is only a fire that forgot it needs air."
+  }
+];
+
 const librarySuitInfo = {
   bloodChalices: {
+    id: 'bloodChalices',
     title: 'Blood Chalices',
+    label: 'Blood Chalices',
     subtitle: 'Minor Arcana · Cups corrupted through blood',
     motto: 'Desire is a thirst, and thirst always demands a price.',
     description: 'Blood Chalices are the suit of emotional appetite: love, longing, grief, romance, seduction, pleasure, memory, wounds, and the hunger to be filled by another person, dream, god, or poison.'
+  },
+  cursedWands: {
+    id: 'cursedWands',
+    title: 'Cursed Wands',
+    label: 'Cursed Wands',
+    subtitle: 'Minor Arcana · Wands corrupted through cursed flame',
+    motto: 'Every spell changes the hand that casts it.',
+    description: 'Cursed Wands are the suit of will, magic, ambition, and fire that has learned to bite. They govern action, passion, leadership, creativity, conquest, conflict, spellcraft, charisma, and the consequences of forcing desire into the world.'
   }
 };
 
-const libraryCards = [...cards, ...bloodChalicesCards];
+const librarySuitSections = [
+  { key: 'bloodChalices', cards: bloodChalicesCards },
+  { key: 'cursedWands', cards: cursedWandsCards }
+];
+
+const libraryCards = [...cards, ...bloodChalicesCards, ...cursedWandsCards];

@@ -87,8 +87,7 @@ function cardKey(card) {
 }
 
 function renderLibrary() {
-  const blood = typeof bloodChalicesCards !== 'undefined' ? bloodChalicesCards : [];
-  const suitInfo = typeof librarySuitInfo !== 'undefined' ? librarySuitInfo.bloodChalices : null;
+  const suits = typeof librarySuitSections !== 'undefined' ? librarySuitSections : [];
 
   const majorHtml = `<section class="library-section">
     <div class="library-section-head">
@@ -108,20 +107,38 @@ function renderLibrary() {
   const minorHtml = `<section class="library-section minor-arcana-section">
     <div class="library-section-head ornate-section-head">
       <p class="eyebrow">Minor Arcana</p>
-      <h3>Blood Chalices</h3>
-      ${suitInfo ? `<p class="suit-motto">“${suitInfo.motto}”</p><p>${suitInfo.description}</p>` : ''}
+      <h3>Minor Arcana Suites</h3>
+      <p>The four lesser houses of Belladonna’s tarot: each suite carries its own appetite, curse, and verdict.</p>
     </div>
-    <div class="library-grid">
-      ${blood.map(card => `<button class="library-card minor-card" data-card="${cardKey(card)}">
-        <img src="${card.image}" alt="${card.name}">
-        <strong>${card.name}</strong>
-        <span>${card.roman} · Blood Chalices</span>
-      </button>`).join('')}
-    </div>
+    ${suits.map(({key, cards: suitCards}) => {
+      const info = librarySuitInfo[key];
+      return `<div class="suite-block suite-${key}">
+        <div class="library-section-head suite-head">
+          <p class="eyebrow">${info.subtitle}</p>
+          <h3>${info.title}</h3>
+          <p class="suit-motto">“${info.motto}”</p>
+          <p>${info.description}</p>
+        </div>
+        <div class="library-grid">
+          ${suitCards.map(card => `<button class="library-card minor-card" data-card="${cardKey(card)}">
+            <img src="${card.image}" alt="${card.name}">
+            <strong>${card.name}</strong>
+            <span>${card.roman} · ${info.label}</span>
+          </button>`).join('')}
+        </div>
+      </div>`;
+    }).join('')}
   </section>`;
 
   $('libraryGrid').innerHTML = majorHtml + minorHtml;
   document.querySelectorAll('[data-card]').forEach(btn => btn.addEventListener('click', () => openCard(btn.dataset.card)));
+}
+
+function suitLabelForCard(card) {
+  if (!card.id) return '';
+  if (card.id.startsWith('blood-')) return 'Blood Chalices';
+  if (card.id.startsWith('wands-')) return 'Cursed Wands';
+  return 'Minor Arcana';
 }
 
 function openCard(key) {
@@ -129,16 +146,17 @@ function openCard(key) {
   const card = source.find(c => cardKey(c) === key || String(c.number) === key);
   if (!card) return;
   const isMinor = !!card.id;
+  const suitLabel = suitLabelForCard(card);
   const reversedKeywords = card.reversedKeywords || [];
   $('dialogContent').innerHTML = `<div class="dialog-grid ${isMinor ? 'minor-dialog' : ''}">
     <img src="${card.image}" alt="${card.name}">
     <div class="dialog-copy">
-      <p class="eyebrow">${isMinor ? 'Minor Arcana · Blood Chalices' : `Major Arcana ${card.roman}`}</p>
+      <p class="eyebrow">${isMinor ? `Minor Arcana · ${suitLabel}` : `Major Arcana ${card.roman}`}</p>
       <h2>${card.name}</h2>
       ${card.core ? `<p class="core-root"><strong>Core Root:</strong> ${card.core}</p>` : ''}
       ${card.visual ? `<p class="visual-concept"><strong>Visual Concept:</strong> ${card.visual}</p>` : ''}
       <div class="section-title">Upright</div>
-      <div class="pill-row">${card.keywords.map(k => `<span class="pill">${k}</span>`).join('')}</div>
+      <div class="pill-row">${(card.keywords || []).map(k => `<span class="pill">${k}</span>`).join('')}</div>
       <p>${card.upright}</p>
       <p><strong>Belladonna’s Verdict:</strong> ${card.verdict}</p>
       <div class="section-title">Reversed</div>

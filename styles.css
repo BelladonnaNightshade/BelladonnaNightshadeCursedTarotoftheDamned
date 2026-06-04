@@ -338,3 +338,17 @@ dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
 .visual-concept{font-size:.93rem}
 .reversed-pills .pill{border-color:rgba(185,21,42,.45);background:#d8b56a;color:#16070b}
 .minor-dialog .dialog-copy h2{color:#f4dfad}
+
+
+/* Cursed Wands suite expansion */
+.suite-block{margin-top:30px}
+.suite-block + .suite-block{margin-top:42px;padding-top:28px;border-top:1px solid rgba(201,164,95,.18)}
+.suite-head{max-width:900px;margin-bottom:14px}
+.suite-cursedWands .suit-motto{color:#ffcf7a;text-shadow:0 0 18px rgba(255,120,30,.12)}
+.suite-cursedWands .minor-card{background:linear-gradient(180deg,rgba(105,36,10,.26),rgba(0,0,0,.30));border-color:rgba(230,155,65,.32)}
+.suite-cursedWands .minor-card:hover{border-color:rgba(255,190,90,.56)}
+.reversed-pills .pill{background:#e9cf88;color:#17070b;border:1px solid rgba(255,232,170,.35);text-shadow:none}
+.dialog-copy p{color:#ead6cc;line-height:1.55}
+.minor-dialog .dialog-copy p{color:#f0ddd2}
+.minor-dialog .dialog-copy .core-root,
+.minor-dialog .dialog-copy .visual-concept{color:#dbc4bd}
