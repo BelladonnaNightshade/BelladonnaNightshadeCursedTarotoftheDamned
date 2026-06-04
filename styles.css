@@ -336,5 +336,5 @@ dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
 .minor-card span{color:#f0c06d}
 .core-root,.visual-concept{border-left:2px solid rgba(201,164,95,.55);padding-left:12px;color:var(--muted)}
 .visual-concept{font-size:.93rem}
-.reversed-pills .pill{border-color:rgba(185,21,42,.45);color:#f0c0c9}
+.reversed-pills .pill{border-color:rgba(185,21,42,.45);background:#d8b56a;color:#16070b}
 .minor-dialog .dialog-copy h2{color:#f4dfad}
