@@ -81,27 +81,68 @@ function doSpread(id) {
   renderReading($('spreadResult'), pulls, { concealed:true, showRevealNote:true });
 }
 
-function renderLibrary() {
-  $('libraryGrid').innerHTML = cards.map(card => `<button class="library-card" data-card="${card.number}">
-    <img src="${card.image}" alt="${card.name}">
-    <strong>${card.name}</strong>
-    <span>${card.roman}</span>
-  </button>`).join('');
-  document.querySelectorAll('[data-card]').forEach(btn => btn.addEventListener('click', () => openCard(Number(btn.dataset.card))));
+
+function cardKey(card) {
+  return card.id || String(card.number);
 }
 
-function openCard(number) {
-  const card = cards.find(c => c.number === number);
-  $('dialogContent').innerHTML = `<div class="dialog-grid">
+function renderLibrary() {
+  const blood = typeof bloodChalicesCards !== 'undefined' ? bloodChalicesCards : [];
+  const suitInfo = typeof librarySuitInfo !== 'undefined' ? librarySuitInfo.bloodChalices : null;
+
+  const majorHtml = `<section class="library-section">
+    <div class="library-section-head">
+      <p class="eyebrow">Major Arcana</p>
+      <h3>The Twenty-Two Greater Curses</h3>
+      <p>The original Major Arcana library remains intact for readings and card reference.</p>
+    </div>
+    <div class="library-grid">
+      ${cards.map(card => `<button class="library-card" data-card="${cardKey(card)}">
+        <img src="${card.image}" alt="${card.name}">
+        <strong>${card.name}</strong>
+        <span>${card.roman}</span>
+      </button>`).join('')}
+    </div>
+  </section>`;
+
+  const minorHtml = `<section class="library-section minor-arcana-section">
+    <div class="library-section-head ornate-section-head">
+      <p class="eyebrow">Minor Arcana</p>
+      <h3>Blood Chalices</h3>
+      ${suitInfo ? `<p class="suit-motto">“${suitInfo.motto}”</p><p>${suitInfo.description}</p>` : ''}
+    </div>
+    <div class="library-grid">
+      ${blood.map(card => `<button class="library-card minor-card" data-card="${cardKey(card)}">
+        <img src="${card.image}" alt="${card.name}">
+        <strong>${card.name}</strong>
+        <span>${card.roman} · Blood Chalices</span>
+      </button>`).join('')}
+    </div>
+  </section>`;
+
+  $('libraryGrid').innerHTML = majorHtml + minorHtml;
+  document.querySelectorAll('[data-card]').forEach(btn => btn.addEventListener('click', () => openCard(btn.dataset.card)));
+}
+
+function openCard(key) {
+  const source = typeof libraryCards !== 'undefined' ? libraryCards : cards;
+  const card = source.find(c => cardKey(c) === key || String(c.number) === key);
+  if (!card) return;
+  const isMinor = !!card.id;
+  const reversedKeywords = card.reversedKeywords || [];
+  $('dialogContent').innerHTML = `<div class="dialog-grid ${isMinor ? 'minor-dialog' : ''}">
     <img src="${card.image}" alt="${card.name}">
     <div class="dialog-copy">
-      <p class="eyebrow">Major Arcana ${card.roman}</p>
+      <p class="eyebrow">${isMinor ? 'Minor Arcana · Blood Chalices' : `Major Arcana ${card.roman}`}</p>
       <h2>${card.name}</h2>
-      <div class="pill-row">${card.keywords.map(k => `<span class="pill">${k}</span>`).join('')}</div>
+      ${card.core ? `<p class="core-root"><strong>Core Root:</strong> ${card.core}</p>` : ''}
+      ${card.visual ? `<p class="visual-concept"><strong>Visual Concept:</strong> ${card.visual}</p>` : ''}
       <div class="section-title">Upright</div>
+      <div class="pill-row">${card.keywords.map(k => `<span class="pill">${k}</span>`).join('')}</div>
       <p>${card.upright}</p>
       <p><strong>Belladonna’s Verdict:</strong> ${card.verdict}</p>
       <div class="section-title">Reversed</div>
+      ${reversedKeywords.length ? `<div class="pill-row reversed-pills">${reversedKeywords.map(k => `<span class="pill">${k}</span>`).join('')}</div>` : ''}
       <p>${card.reversed}</p>
       <p><strong>Reversed Verdict:</strong> ${card.reversedVerdict}</p>
     </div>
