@@ -352,3 +352,9 @@ dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
 .minor-dialog .dialog-copy p{color:#f0ddd2}
 .minor-dialog .dialog-copy .core-root,
 .minor-dialog .dialog-copy .visual-concept{color:#dbc4bd}
+
+
+/* Pentacles of the Grave suite expansion */
+.suite-pentaclesOfTheGrave .suit-motto{color:#f4d18a;text-shadow:0 0 20px rgba(218,168,72,.12)}
+.suite-pentaclesOfTheGrave .minor-card{background:linear-gradient(180deg,rgba(92,62,24,.30),rgba(0,0,0,.32));border-color:rgba(218,168,72,.34)}
+.suite-pentaclesOfTheGrave .minor-card:hover{border-color:rgba(245,204,112,.60);box-shadow:0 14px 34px rgba(70,45,12,.24)}

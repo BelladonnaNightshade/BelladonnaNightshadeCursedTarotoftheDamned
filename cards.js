@@ -1344,6 +1344,448 @@ const silverBladesCards = [
   }
 ];
 
+const pentaclesOfTheGraveCards = [
+  {
+    "id": "pentacles-ace",
+    "sort": 1,
+    "roman": "Ace",
+    "name": "Ace of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/ace.jpg",
+    "keywords": [
+      "opportunity",
+      "money",
+      "work",
+      "resources",
+      "beginning",
+      "contract",
+      "security",
+      "material seed"
+    ],
+    "core": "Material opportunity, prosperity, new work, resources, physical beginning.",
+    "visual": "A golden pentacle seal lies on black velvet inside an open grave. A single drop of blood stains the coin. Pale roots curl around it like fingers.",
+    "upright": "A material opportunity appears. Money, work, land, body, craft, inheritance, or practical power begins to take form. This is the first coin, the first contract, the first key, the first stone laid over the earth. The Ace of Pentacles of the Grave says something real is being offered. But everything real has weight.",
+    "verdict": "The coin is in your hand. Now ask whose grave it was dug from.",
+    "reversed": "The opportunity is tainted, delayed, false, or already owned by someone else. This may show bad contracts, greed, missed chances, financial traps, bodily neglect, or an offer that costs more than it promises.",
+    "reversedKeywords": [
+      "bad offer",
+      "greed",
+      "financial trap",
+      "missed chance",
+      "false security",
+      "tainted opportunity",
+      "debt"
+    ],
+    "reversedVerdict": "Some coins are not paid. They are planted."
+  },
+  {
+    "id": "pentacles-two",
+    "sort": 2,
+    "roman": "Two",
+    "name": "Two of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/two.jpg",
+    "keywords": [
+      "balance",
+      "adaptation",
+      "resources",
+      "juggling",
+      "survival",
+      "flexibility",
+      "financial motion",
+      "obligations"
+    ],
+    "core": "Balance, juggling resources, adaptation, financial choices, instability.",
+    "visual": "A figure balances two gold grave-pentacles while standing between a ledger and an open coffin. Behind them, ships or hearses move through stormy waves.",
+    "upright": "The material world demands balance. Money, time, body, work, duty, and survival must be managed carefully. This card is adaptation, juggling obligations, and learning how to keep power moving without dropping what matters. The Two of Pentacles of the Grave asks whether you are managing your life or merely dancing for your debts.",
+    "verdict": "You may dance with two coins, but remember: the grave waits patiently for you to drop one.",
+    "reversed": "The balance fails. Debt, chaos, exhaustion, poor management, financial panic, bodily strain, or obligations multiplying beyond control. This card may show someone crushed by the very tasks they once thought they could handle.",
+    "reversedKeywords": [
+      "instability",
+      "debt",
+      "chaos",
+      "exhaustion",
+      "poor management",
+      "overwhelm",
+      "financial panic"
+    ],
+    "reversedVerdict": "You called it balance because collapse had not yet chosen a side."
+  },
+  {
+    "id": "pentacles-three",
+    "sort": 3,
+    "roman": "Three",
+    "name": "Three of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/three.jpg",
+    "keywords": [
+      "craft",
+      "work",
+      "collaboration",
+      "skill",
+      "structure",
+      "planning",
+      "building",
+      "expertise"
+    ],
+    "core": "Skill, work, collaboration, craftsmanship, building, recognition.",
+    "visual": "Three artisans, undertakers, or occult masons carve pentacle seals into a mausoleum wall while Belladonna oversees the work by candlelight.",
+    "upright": "The tomb is built by skilled hands. This card represents craft, collaboration, labor, planning, expertise, and the practical work required to make power last. The Three of Pentacles of the Grave says talent must become structure. A dream is worthless until someone knows how to carve it into stone.",
+    "verdict": "Even a curse requires a competent mason.",
+    "reversed": "Poor work, failed collaboration, exploitation, incompetence, vanity without skill, or labor taken without respect. This card may show a project collapsing because the foundation was built by ego rather than craft.",
+    "reversedKeywords": [
+      "incompetence",
+      "poor craft",
+      "exploitation",
+      "failed teamwork",
+      "vanity",
+      "weak foundation"
+    ],
+    "reversedVerdict": "A crooked tomb still holds a body. It simply shames the family longer."
+  },
+  {
+    "id": "pentacles-four",
+    "sort": 4,
+    "roman": "Four",
+    "name": "Four of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/four.jpg",
+    "keywords": [
+      "control",
+      "security",
+      "possession",
+      "saving",
+      "guarding",
+      "boundaries",
+      "material protection"
+    ],
+    "core": "Holding on, control, security, possessiveness, saving, hoarding.",
+    "visual": "A vampire noble sits inside a locked crypt clutching four gold pentacles. One rests under each hand, one at the heart, one beneath the feet. Coffers and bones surround them.",
+    "upright": "Power is being guarded. This card represents possession, savings, control, material security, boundaries, and the instinct to hold what has been earned or stolen. The Four of Pentacles of the Grave is not automatically greed. Sometimes the crypt must be locked. But it asks whether security has become fear with better furniture.",
+    "verdict": "Lock the vault if you must. But know whether you are protecting treasure or sleeping inside your own coffin.",
+    "reversed": "Hoarding, greed, fear of loss, financial paranoia, possessiveness, material obsession, or being imprisoned by what one refuses to release.",
+    "reversedKeywords": [
+      "hoarding",
+      "greed",
+      "paranoia",
+      "possessiveness",
+      "fear of loss",
+      "material prison",
+      "obsession"
+    ],
+    "reversedVerdict": "A clenched hand cannot receive. It can only become another lock."
+  },
+  {
+    "id": "pentacles-five",
+    "sort": 5,
+    "roman": "Five",
+    "name": "Five of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/five.jpg",
+    "keywords": [
+      "poverty",
+      "hardship",
+      "illness",
+      "exclusion",
+      "loss",
+      "need",
+      "rejection",
+      "material suffering"
+    ],
+    "core": "Poverty, hardship, exclusion, illness, loss, material suffering.",
+    "visual": "Two figures pass a lit mausoleum window in snow or grave ash, wounded and hungry, while five pentacle seals glow from inside where they are not welcomed.",
+    "upright": "The material world turns cold. This card is poverty, exclusion, illness, hardship, rejection, and the humiliation of needing shelter from those who claim virtue while keeping the door barred. The Five of Pentacles of the Grave asks what suffering has revealed about power, dependency, and who is allowed inside.",
+    "verdict": "The locked door teaches more about wealth than the banquet behind it.",
+    "reversed": "Despair, degradation, abandonment, spiritual and material starvation, shame, refusal of help, or being trapped in poverty so long it becomes identity.",
+    "reversedKeywords": [
+      "despair",
+      "abandonment",
+      "degradation",
+      "shame",
+      "starvation",
+      "hopelessness",
+      "refusal of help"
+    ],
+    "reversedVerdict": "There are graves warmer than a world that has decided you are expensive to save."
+  },
+  {
+    "id": "pentacles-six",
+    "sort": 6,
+    "roman": "Six",
+    "name": "Six of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/six.jpg",
+    "keywords": [
+      "charity",
+      "patronage",
+      "generosity",
+      "exchange",
+      "debt",
+      "support",
+      "power imbalance"
+    ],
+    "core": "Charity, generosity, giving and receiving, patronage, power imbalance.",
+    "visual": "A gloved noble hand drops a gold pentacle into the palm of a kneeling figure while the other hand hides a ledger, contract, or leash.",
+    "upright": "Resources change hands, but never innocently. This card is charity, patronage, generosity, debt, exchange, and the unequal power between the giver and the receiver. The Six of Pentacles of the Grave asks who benefits from generosity, and what is expected after the coin touches the palm.",
+    "verdict": "A gift is only free until the giver remembers your name.",
+    "reversed": "Exploitation, debt traps, humiliation through charity, false generosity, financial control, bribery, or help given only to purchase obedience.",
+    "reversedKeywords": [
+      "exploitation",
+      "bribery",
+      "debt",
+      "humiliation",
+      "false generosity",
+      "control",
+      "dependency"
+    ],
+    "reversedVerdict": "Beware the hand that feeds you only to measure the collar."
+  },
+  {
+    "id": "pentacles-seven",
+    "sort": 7,
+    "roman": "Seven",
+    "name": "Seven of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/seven.jpg",
+    "keywords": [
+      "patience",
+      "investment",
+      "waiting",
+      "assessment",
+      "harvest",
+      "long-term work",
+      "cultivation"
+    ],
+    "core": "Patience, investment, waiting, assessment, long-term growth.",
+    "visual": "A figure stands in a graveyard garden where seven pentacles grow like gold fruit from black roots. The harvest is not yet ready.",
+    "upright": "The grave has been planted. Now you wait. This card is investment, patience, assessment, labor over time, and the slow growth of material consequence. The Seven of Pentacles of the Grave asks whether what you are cultivating will be worth the years it steals.",
+    "verdict": "Do not curse the grave for being slow. You chose to plant something that feeds on time.",
+    "reversed": "Wasted effort, impatience, poor investment, failure to harvest, labor without reward, or realizing too late that the crop was poison.",
+    "reversedKeywords": [
+      "wasted effort",
+      "impatience",
+      "poor investment",
+      "failure",
+      "bad harvest",
+      "exhaustion",
+      "disappointment"
+    ],
+    "reversedVerdict": "Not every seed deserves a season. Some should have been buried and forgotten."
+  },
+  {
+    "id": "pentacles-eight",
+    "sort": 8,
+    "roman": "Eight",
+    "name": "Eight of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/eight.jpg",
+    "keywords": [
+      "work",
+      "skill",
+      "discipline",
+      "apprenticeship",
+      "craft",
+      "mastery",
+      "practice",
+      "diligence"
+    ],
+    "core": "Apprenticeship, skill, work, diligence, mastery through repetition.",
+    "visual": "An artisan engraves eight pentacle seals onto coffin plates, coins, or crypt stones by candlelight. Their hands are tired but precise.",
+    "upright": "Power is made by repetition. This card is labor, apprenticeship, craft, discipline, practice, and the patient work of turning skill into value. The Eight of Pentacles of the Grave says mastery is not glamorous. It is the hand returning to the tool until the world must respect the mark it leaves.",
+    "verdict": "The grave remembers the hand that carved it.",
+    "reversed": "Bad work, laziness, exploitation, meaningless labor, perfectionism that becomes punishment, or being trapped in work that drains the body without building power.",
+    "reversedKeywords": [
+      "poor work",
+      "exploitation",
+      "laziness",
+      "meaningless labor",
+      "perfectionism",
+      "drudgery",
+      "burnout"
+    ],
+    "reversedVerdict": "Labor without purpose is just a slower burial."
+  },
+  {
+    "id": "pentacles-nine",
+    "sort": 9,
+    "roman": "Nine",
+    "name": "Nine of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/nine.jpg",
+    "keywords": [
+      "luxury",
+      "independence",
+      "refinement",
+      "self-sufficiency",
+      "wealth",
+      "comfort",
+      "earned power"
+    ],
+    "core": "Luxury, independence, self-sufficiency, refinement, earned abundance.",
+    "visual": "Belladonna stands in a moonlit grave garden wearing black silk and gold jewelry, surrounded by nine pentacle seals, ravens, roses, and locked gates. She owns the night around her.",
+    "upright": "Luxury has been earned or claimed. This card is independence, refinement, self-sufficiency, wealth, sensual comfort, and the pleasure of standing inside a world built by one’s own power. The Nine of Pentacles of the Grave is not simple comfort. It is the elegance of not needing permission.",
+    "verdict": "She does not ask to enter the garden. The keys are already in her blood.",
+    "reversed": "Luxury becomes loneliness, dependence disguised as independence, vanity, financial fragility, kept comfort, or beauty purchased at the cost of freedom.",
+    "reversedKeywords": [
+      "loneliness",
+      "vanity",
+      "dependence",
+      "fragile wealth",
+      "false independence",
+      "trapped luxury"
+    ],
+    "reversedVerdict": "A gilded cage is still honest enough to call itself a cage if you stop praising the gold."
+  },
+  {
+    "id": "pentacles-ten",
+    "sort": 10,
+    "roman": "Ten",
+    "name": "Ten of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/ten.jpg",
+    "keywords": [
+      "legacy",
+      "inheritance",
+      "family wealth",
+      "dynasty",
+      "estate",
+      "ancestry",
+      "stability",
+      "bloodline"
+    ],
+    "core": "Legacy, family wealth, inheritance, dynasty, long-term stability.",
+    "visual": "A vampire family estate rises behind ten grave pentacles. Ancestral portraits, coffins, heirs, hounds, old coins, and bloodline seals fill the scene.",
+    "upright": "The bloodline has built something that survives the body. This card is legacy, dynasty, inheritance, family wealth, land, estate, ancestral power, and the material structures that outlive individual desire. The Ten of Pentacles of the Grave asks what you will inherit, what you will leave behind, and whether the family tomb is a monument or a warning.",
+    "verdict": "The dead do not leave wealth behind. They leave instructions.",
+    "reversed": "Cursed inheritance, family corruption, bloodline debt, estate conflict, material ruin, ancestral rot, or being trapped by the legacy one was supposed to benefit from.",
+    "reversedKeywords": [
+      "cursed inheritance",
+      "family corruption",
+      "bloodline debt",
+      "estate conflict",
+      "ruin",
+      "ancestral trap"
+    ],
+    "reversedVerdict": "Some families pass down jewels. Others pass down graves with room inside."
+  },
+  {
+    "id": "pentacles-acolyte",
+    "sort": 11,
+    "roman": "Acolyte",
+    "name": "Acolyte of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/acolyte.jpg",
+    "keywords": [
+      "study",
+      "opportunity",
+      "apprenticeship",
+      "new work",
+      "practical learning",
+      "manifestation",
+      "discipline"
+    ],
+    "core": "Page of Pentacles — study, opportunity, practical learning, manifestation, new work.",
+    "visual": "A young apprentice studies a gold pentacle seal by candlelight in a crypt library. A ledger, bone quill, and grave deed sit nearby.",
+    "upright": "The Acolyte is the student of material power. This card represents learning, apprenticeship, new work, financial opportunity, practical study, and the first serious encounter with the world of value.",
+    "verdict": "The first coin teaches what sermons conceal.",
+    "reversed": "Laziness, wasted opportunity, poor study, material immaturity, bad habits, foolish spending, or wanting rewards without learning the cost of value.",
+    "reversedKeywords": [
+      "laziness",
+      "wasted chance",
+      "immaturity",
+      "poor habits",
+      "foolish spending",
+      "lack of discipline"
+    ],
+    "reversedVerdict": "A child who mocks the ledger will still inherit the debt."
+  },
+  {
+    "id": "pentacles-hunter",
+    "sort": 12,
+    "roman": "Hunter",
+    "name": "Hunter of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/hunter.jpg",
+    "keywords": [
+      "patience",
+      "responsibility",
+      "persistence",
+      "routine",
+      "work",
+      "slow gain",
+      "discipline",
+      "duty"
+    ],
+    "core": "Knight of Pentacles — patience, work, routine, responsibility, persistence.",
+    "visual": "A dark rider moves slowly through a cemetery road carrying a locked chest, grave deed, or gold pentacle shield. His horse is steady, not swift.",
+    "upright": "The Hunter pursues material power through patience. This card represents discipline, responsibility, routine, persistence, slow gain, and the willingness to carry the burden until it becomes wealth.",
+    "verdict": "The slow rider arrives with fewer songs and more keys.",
+    "reversed": "Stagnation, stubbornness, drudgery, laziness, lifeless routine, fear of change, or working so faithfully for a cage that one forgets to look for a door.",
+    "reversedKeywords": [
+      "stagnation",
+      "stubbornness",
+      "drudgery",
+      "laziness",
+      "lifeless routine",
+      "fear",
+      "dead labor"
+    ],
+    "reversedVerdict": "A rut is only a grave that has not yet closed over you."
+  },
+  {
+    "id": "pentacles-queen",
+    "sort": 13,
+    "roman": "Queen",
+    "name": "Queen of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/queen.jpg",
+    "keywords": [
+      "security",
+      "luxury",
+      "nurture",
+      "practicality",
+      "sensuality",
+      "wealth",
+      "home",
+      "resource power"
+    ],
+    "core": "Queen of Pentacles — nurture, security, luxury, practicality, sensual earth power.",
+    "visual": "Belladonna sits in a luxurious crypt-garden with black roses, gold coins, velvet, candles, and a pentacle seal in her hand. She is both hostess and owner.",
+    "upright": "The Queen of Pentacles of the Grave is material sovereignty made sensual. She understands comfort, wealth, body, home, food, beauty, security, and the management of resources. She nurtures, but not foolishly. Her generosity has gates. Her house has locks. Her luxury is an instrument of power.",
+    "verdict": "Her table is generous because her doors are locked.",
+    "reversed": "Possessive nurture, material vanity, smothering control, greed hidden as care, domestic tyranny, or luxury used to trap rather than shelter.",
+    "reversedKeywords": [
+      "possessiveness",
+      "greed",
+      "smothering",
+      "vanity",
+      "domestic control",
+      "false nurture",
+      "trapped comfort"
+    ],
+    "reversedVerdict": "She feeds you so you forget where the exits are."
+  },
+  {
+    "id": "pentacles-sovereign",
+    "sort": 14,
+    "roman": "Sovereign",
+    "name": "Sovereign of Pentacles of the Grave",
+    "image": "cards/pentacles-of-the-grave/sovereign.jpg",
+    "keywords": [
+      "wealth",
+      "authority",
+      "property",
+      "dynasty",
+      "mastery",
+      "stability",
+      "business",
+      "material command"
+    ],
+    "core": "King of Pentacles — wealth, authority, business, stability, mastery of resources.",
+    "visual": "A vampire sovereign sits in a black marble vault-throne surrounded by coins, ledgers, coffins, estate maps, and pentacle seals. He owns more than gold; he owns consequences.",
+    "upright": "The Sovereign of Pentacles of the Grave rules the material world. He represents wealth, authority, property, dynasty, business, stability, and mastery over resources. This card is worldly power made durable. It asks how wealth is built, protected, inherited, and used.",
+    "verdict": "Gold is not power. Gold is what power leaves behind so the foolish can count it.",
+    "reversed": "Greed, corruption, exploitation, class cruelty, tyranny through wealth, material arrogance, decay beneath luxury, or a ruler possessed by possession itself.",
+    "reversedKeywords": [
+      "greed",
+      "corruption",
+      "exploitation",
+      "class cruelty",
+      "tyranny",
+      "arrogance",
+      "possessed by wealth"
+    ],
+    "reversedVerdict": "He owned everything but the hunger that owned him."
+  }
+];
+
 const librarySuitInfo = {
   bloodChalices: {
     id: 'bloodChalices',
@@ -1368,13 +1810,22 @@ const librarySuitInfo = {
     subtitle: 'Minor Arcana · Swords corrupted through moonlit silver',
     motto: 'The truth is a blade; mercy is only how slowly it enters.',
     description: 'Silver Blades are the suit of cruel clarity: truth, intellect, strategy, conflict, betrayal, accusation, judgment, and the pain that comes from seeing clearly. In Belladonna’s world, thought becomes a silver weapon — elegant, sacred, and merciless.'
+  },
+  pentaclesOfTheGrave: {
+    id: 'pentaclesOfTheGrave',
+    title: 'Pentacles of the Grave',
+    label: 'Pentacles of the Grave',
+    subtitle: 'Minor Arcana · Pentacles buried beneath death',
+    motto: 'Every possession is already practicing how to outlive you.',
+    description: 'Pentacles of the Grave are the suit of material power under the shadow of death: wealth, labor, survival, the body, land, contracts, debt, inheritance, bloodlines, ownership, and what remains after the flesh is gone.'
   }
 };
 
 const librarySuitSections = [
   { key: 'bloodChalices', cards: bloodChalicesCards },
   { key: 'cursedWands', cards: cursedWandsCards },
-  { key: 'silverBlades', cards: silverBladesCards }
+  { key: 'silverBlades', cards: silverBladesCards },
+  { key: 'pentaclesOfTheGrave', cards: pentaclesOfTheGraveCards }
 ];
 
-const libraryCards = [...cards, ...bloodChalicesCards, ...cursedWandsCards, ...silverBladesCards];
+const libraryCards = [...cards, ...bloodChalicesCards, ...cursedWandsCards, ...silverBladesCards, ...pentaclesOfTheGraveCards];
