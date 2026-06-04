@@ -358,3 +358,77 @@ dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
 .suite-pentaclesOfTheGrave .suit-motto{color:#f4d18a;text-shadow:0 0 20px rgba(218,168,72,.12)}
 .suite-pentaclesOfTheGrave .minor-card{background:linear-gradient(180deg,rgba(92,62,24,.30),rgba(0,0,0,.32));border-color:rgba(218,168,72,.34)}
 .suite-pentaclesOfTheGrave .minor-card:hover{border-color:rgba(245,204,112,.60);box-shadow:0 14px 34px rgba(70,45,12,.24)}
+
+
+/* Full-deck reading options */
+.reading-options-panel{
+  background:
+    radial-gradient(circle at top left, rgba(201,164,95,.12), transparent 30%),
+    linear-gradient(180deg, rgba(29,9,15,.88), rgba(7,3,5,.86));
+}
+.reading-options-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  margin-top:18px;
+}
+.reading-option-control,
+.reading-option-toggle{
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.28);
+  border-radius:18px;
+  padding:14px;
+  min-height:74px;
+}
+.reading-option-control{
+  flex:1 1 320px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.reading-option-control span,
+.reading-option-toggle span{
+  color:var(--gold);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.reading-option-control select{
+  width:100%;
+  border:1px solid var(--line-strong);
+  border-radius:999px;
+  background:#12070b;
+  color:var(--cream);
+  padding:12px 14px;
+  font-weight:800;
+  outline:none;
+}
+.reading-option-control select:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 4px rgba(201,164,95,.08);
+}
+.reading-option-toggle{
+  flex:0 1 220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
+}
+.reading-option-toggle input{
+  flex:0 0 auto;
+  min-width:0;
+  width:20px;
+  height:20px;
+  accent-color:var(--blood);
+}
+.settings-note{
+  margin:14px 0 0!important;
+  color:#fff0d2!important;
+  font-weight:800;
+}
+@media(max-width:720px){
+  .reading-option-toggle{flex:1 1 100%;justify-content:flex-start}
+}

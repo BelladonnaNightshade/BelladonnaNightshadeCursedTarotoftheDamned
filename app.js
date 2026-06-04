@@ -8,8 +8,44 @@ const spreads = [
 ];
 
 const $ = (id) => document.getElementById(id);
-const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
-const orientation = () => Math.random() > 0.5 ? 'upright' : 'reversed';
+function randomFloat() {
+  if (window.crypto && window.crypto.getRandomValues) {
+    const values = new Uint32Array(1);
+    window.crypto.getRandomValues(values);
+    return values[0] / 4294967296;
+  }
+  return Math.random();
+}
+
+function shuffle(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(randomFloat() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function getReadingDeck() {
+  const scope = $('deckScope') ? $('deckScope').value : 'full';
+  const fullDeck = typeof libraryCards !== 'undefined' ? libraryCards : cards;
+  if (scope === 'major') return cards;
+  return fullDeck;
+}
+
+function reversalsEnabled() {
+  const toggle = $('reversalsToggle');
+  return !toggle || toggle.checked;
+}
+
+function orientation() {
+  if (!reversalsEnabled()) return 'upright';
+  return randomFloat() > 0.5 ? 'upright' : 'reversed';
+}
+
+function randomCard(deck) {
+  return deck[Math.floor(randomFloat() * deck.length)];
+}
 
 function renderReading(target, pulls, options = {}) {
   const concealed = !!options.concealed;
@@ -52,13 +88,15 @@ function renderReading(target, pulls, options = {}) {
 }
 
 function drawOne() {
-  const card = cards[Math.floor(Math.random() * cards.length)];
+  const deck = getReadingDeck();
+  const card = randomCard(deck);
   const orient = orientation();
   renderReading($('oneCardResult'), [{card, orient, slot:'Belladonna’s Verdict'}], { concealed:false });
 }
 
 function dailyCard() {
-  const card = cards[Math.floor(Math.random() * cards.length)];
+  const deck = getReadingDeck();
+  const card = randomCard(deck);
   const orient = orientation();
   renderReading($('dailyResult'), [{card, orient, slot:'Today’s Curse'}], { concealed:false });
 }
@@ -74,7 +112,7 @@ function renderSpreads() {
 
 function doSpread(id) {
   const spread = spreads.find(s => s.id === id);
-  const deck = shuffle(cards).slice(0, spread.slots.length);
+  const deck = shuffle(getReadingDeck()).slice(0, spread.slots.length);
   const pulls = deck.map((card, i) => ({card, slot: spread.slots[i], orient: orientation()}));
   $('spreadMeta').innerHTML = `${spread.title} · ${spread.slots.length} cards`;
   $('spreadRevealNote').innerHTML = `Each position has been laid upon Belladonna’s table. Click the cards to reveal the spread.`;
@@ -173,5 +211,19 @@ function openCard(key) {
 $('drawBtn').addEventListener('click', drawOne);
 $('dailyBtn').addEventListener('click', dailyCard);
 $('closeDialog').addEventListener('click', () => $('cardDialog').close());
+
+function updateReadingSettingsNote() {
+  const note = $('readingSettingsNote');
+  if (!note) return;
+  const deckText = $('deckScope') && $('deckScope').value === 'major' ? 'Major Arcana only' : 'Full 78-card deck';
+  const reversalText = reversalsEnabled() ? 'reversals on' : 'reversals off';
+  note.textContent = `${deckText}, ${reversalText}.`;
+}
+
+['deckScope','reversalsToggle'].forEach(id => {
+  const control = $(id);
+  if (control) control.addEventListener('change', updateReadingSettingsNote);
+});
+updateReadingSettingsNote();
 renderSpreads();
 renderLibrary();

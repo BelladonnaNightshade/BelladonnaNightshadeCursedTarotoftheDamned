@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=minor-arcana-library2" />
+  <link rel="stylesheet" href="styles.css?v=full-deck-options1" />
 </head>
 <body>
   <div class="backdrop"></div>
@@ -68,6 +68,28 @@
       <div class="reading-grid" id="dailyResult"></div>
     </section>
 
+
+
+    <section class="panel reading-options-panel" id="reading-options">
+      <p class="eyebrow">Reading Settings</p>
+      <h2>Choose the Deck</h2>
+      <p>The default reading uses the full cursed tarot deck with reversals enabled. Readers who prefer a simpler draw can switch to Major Arcana only or turn reversals off.</p>
+      <div class="reading-options-row">
+        <label class="reading-option-control" for="deckScope">
+          <span>Deck Scope</span>
+          <select id="deckScope" aria-label="Deck scope">
+            <option value="full" selected>Full Deck — Major & Minor Arcana</option>
+            <option value="major">Major Arcana Only</option>
+          </select>
+        </label>
+        <label class="reading-option-toggle" for="reversalsToggle">
+          <input id="reversalsToggle" type="checkbox" checked>
+          <span>Reversals On</span>
+        </label>
+      </div>
+      <p class="settings-note" id="readingSettingsNote">Full 78-card deck, reversals on.</p>
+    </section>
+
     <section class="panel" id="draw">
       <p class="eyebrow">Ask Belladonna</p>
       <h2>One-Card Reading</h2>
@@ -109,7 +131,7 @@
     <section class="panel" id="library">
       <p class="eyebrow">The Crypt</p>
       <h2>Card Library</h2>
-      <p>Open any card to read its upright meaning, reversed corruption, keywords, and verdict. The Minor Arcana now includes Blood Chalices and Cursed Wands.</p>
+      <p>Open any card to read its upright meaning, reversed corruption, keywords, and verdict. The Minor Arcana now includes all four suites: Blood Chalices, Cursed Wands, Silver Blades, and Pentacles of the Grave.</p>
       <div class="library-grid" id="libraryGrid"></div>
     </section>
   </main>
@@ -136,6 +158,6 @@
   </footer>
 
   <script src="cards.js"></script>
-  <script src="app.js?v=minor-arcana-library2"></script>
+  <script src="app.js?v=full-deck-options1"></script>
 </body>
 </html>
