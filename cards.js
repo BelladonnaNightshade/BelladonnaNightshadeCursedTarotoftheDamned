@@ -906,6 +906,444 @@ const cursedWandsCards = [
   }
 ];
 
+const silverBladesCards = [
+  {
+    "id": "blades-ace",
+    "sort": 1,
+    "roman": "Ace",
+    "name": "Ace of Silver Blades",
+    "image": "cards/silver-blades/ace.jpg",
+    "keywords": [
+      "truth",
+      "clarity",
+      "breakthrough",
+      "decision",
+      "intellect",
+      "revelation",
+      "sharp perception",
+      "first cut"
+    ],
+    "core": "Truth, clarity, breakthrough, intellect, decision, new idea.",
+    "visual": "A single silver blade descends from black clouds, catching moonlight at its edge. A thin line of blood runs down the blade, though no hand holds it. Ravens circle above.",
+    "upright": "The first cut of truth. A new idea, revelation, decision, or moment of clarity appears. The fog parts. The lie weakens. The mind sharpens. The Ace of Silver Blades is not comfort. It is the power to see, speak, decide, and sever. Something must be named clearly before it can be controlled.",
+    "verdict": "The blade has appeared. Now decide whether you fear the wound more than the lie.",
+    "reversed": "The truth is twisted, delayed, or used badly. This may show confusion, false certainty, cruel speech, lies disguised as insight, or a decision made with a poisoned mind.",
+    "reversedKeywords": [
+      "confusion",
+      "false clarity",
+      "cruel words",
+      "lies",
+      "bad judgment",
+      "mental fog",
+      "twisted truth"
+    ],
+    "reversedVerdict": "A dull blade still cuts. It simply makes the wound uglier."
+  },
+  {
+    "id": "blades-two",
+    "sort": 2,
+    "roman": "Two",
+    "name": "Two of Silver Blades",
+    "image": "cards/silver-blades/two.jpg",
+    "keywords": [
+      "indecision",
+      "stalemate",
+      "guardedness",
+      "difficult choice",
+      "blocked truth",
+      "emotional restraint"
+    ],
+    "core": "Indecision, stalemate, blocked emotions, difficult choice.",
+    "visual": "A blindfolded figure holds two crossed silver blades before her heart. Behind her, a dark moon hangs over still water. Belladonna watches from shadow.",
+    "upright": "A choice is being delayed because both truths wound. This card is stalemate, guarded thought, emotional suppression, and the cold discipline of refusing to move until the correct cut is clear. The Two of Silver Blades asks what you are avoiding because seeing it would require action.",
+    "verdict": "Crossed blades are still blades. Refusal is also a decision.",
+    "reversed": "The stalemate becomes cowardice. This card may show denial, paralysis, self-deception, refusal to choose, or being trapped between two lies because the truth demands too much.",
+    "reversedKeywords": [
+      "denial",
+      "cowardice",
+      "paralysis",
+      "avoidance",
+      "self-deception",
+      "blocked decision",
+      "inner conflict"
+    ],
+    "reversedVerdict": "The blindfold does not protect you from the blade. It only ensures you will not see who holds it."
+  },
+  {
+    "id": "blades-three",
+    "sort": 3,
+    "roman": "Three",
+    "name": "Three of Silver Blades",
+    "image": "cards/silver-blades/three.jpg",
+    "keywords": [
+      "heartbreak",
+      "betrayal",
+      "sorrow",
+      "painful truth",
+      "grief",
+      "wound",
+      "revelation through pain"
+    ],
+    "core": "Heartbreak, sorrow, betrayal, painful truth, emotional wound.",
+    "visual": "Three silver daggers pierce a black heart pinned against crimson velvet. Rain falls like tears across a broken mirror.",
+    "upright": "The heart is cut open, and something true is revealed. This card is heartbreak, betrayal, sorrow, grief, and the pain of discovering what sentiment tried to hide. The Three of Silver Blades does not celebrate suffering. It says that some truths enter through the heart because the mind refused to open.",
+    "verdict": "The heart bleeds because it finally understands what the mouth kept excusing.",
+    "reversed": "Pain becomes poison. This card may show cruelty, emotional sadism, old wounds weaponized, self-harm through memory, bitterness, or someone who keeps twisting the blade to feel alive.",
+    "reversedKeywords": [
+      "bitterness",
+      "cruelty",
+      "emotional sadism",
+      "old wounds",
+      "resentment",
+      "poisoned grief",
+      "self-torment"
+    ],
+    "reversedVerdict": "You are not healing the wound. You are decorating the knife."
+  },
+  {
+    "id": "blades-four",
+    "sort": 4,
+    "roman": "Four",
+    "name": "Four of Silver Blades",
+    "image": "cards/silver-blades/four.jpg",
+    "keywords": [
+      "rest",
+      "recovery",
+      "retreat",
+      "silence",
+      "contemplation",
+      "pause",
+      "strategic withdrawal"
+    ],
+    "core": "Rest, recovery, retreat, contemplation, withdrawal after conflict.",
+    "visual": "A pale figure lies in a stone crypt beneath four silver blades suspended above like silent judgment. The chamber is peaceful, but not warm.",
+    "upright": "The mind retreats to survive. This card is rest, recovery, silence, strategic withdrawal, and the pause required after conflict or grief. The Four of Silver Blades says not every battle is won by motion. Sometimes the blade must be sheathed before it can be sharpened.",
+    "verdict": "Lie still. Even a blade must sleep before it kills cleanly.",
+    "reversed": "Rest becomes stagnation or collapse. This card may show mental exhaustion, isolation, avoidance, refusal to recover, or a mind locked in the tomb long after the war has ended.",
+    "reversedKeywords": [
+      "exhaustion",
+      "stagnation",
+      "isolation",
+      "avoidance",
+      "mental collapse",
+      "refusal to heal"
+    ],
+    "reversedVerdict": "A crypt is only sanctuary until you forget how to leave it."
+  },
+  {
+    "id": "blades-five",
+    "sort": 5,
+    "roman": "Five",
+    "name": "Five of Silver Blades",
+    "image": "cards/silver-blades/five.jpg",
+    "keywords": [
+      "conflict",
+      "hollow victory",
+      "defeat",
+      "humiliation",
+      "strategy",
+      "cruelty",
+      "cost of winning"
+    ],
+    "core": "Conflict, defeat, hollow victory, humiliation, winning at a cost.",
+    "visual": "A victorious figure holds several silver blades while defeated enemies retreat across a moonlit battlefield. Belladonna smiles from the fog.",
+    "upright": "Victory has been won, but the air smells of disgrace. This card is conflict, defeat, humiliation, strategic cruelty, and the uneasy triumph of winning through sharpness rather than honor. The Five of Silver Blades asks whether the victory was worth the damage — and whether the damage was the point.",
+    "verdict": "You won. Now ask why the silence after victory sounds like accusation.",
+    "reversed": "Cruelty becomes uglier. This card may show cowardly attacks, backstabbing, abuse, humiliation for pleasure, surrender without dignity, or a person who would rather ruin the field than lose the game.",
+    "reversedKeywords": [
+      "backstabbing",
+      "abuse",
+      "cowardice",
+      "spite",
+      "humiliation",
+      "disgrace",
+      "vicious defeat"
+    ],
+    "reversedVerdict": "A blade raised after the battle is not strategy. It is appetite."
+  },
+  {
+    "id": "blades-six",
+    "sort": 6,
+    "roman": "Six",
+    "name": "Six of Silver Blades",
+    "image": "cards/silver-blades/six.jpg",
+    "keywords": [
+      "transition",
+      "departure",
+      "escape",
+      "recovery",
+      "passage",
+      "moving on",
+      "exile",
+      "mental distance"
+    ],
+    "core": "Transition, moving on, leaving difficulty, passage, mental healing.",
+    "visual": "A black boat crosses dark water beneath a moonlit sky. Six silver blades stand upright in the boat like silent passengers. A cloaked figure moves away from a ruined shore.",
+    "upright": "The mind leaves the battlefield. This card is transition, exile, escape, recovery, and the painful intelligence of moving away from what cannot be solved by staying. The Six of Silver Blades does not promise joy. It promises distance. Sometimes distance is the first mercy.",
+    "verdict": "Leave the shore. Some wounds only stop speaking when the water is between you.",
+    "reversed": "The passage is blocked. This card may show inability to move on, being trapped by memory, returning to pain, exile without hope, or carrying the blades so long they become home.",
+    "reversedKeywords": [
+      "stuckness",
+      "trapped memory",
+      "failed escape",
+      "return to pain",
+      "hopeless transition",
+      "emotional exile"
+    ],
+    "reversedVerdict": "You crossed the water and brought the prison in your mouth."
+  },
+  {
+    "id": "blades-seven",
+    "sort": 7,
+    "roman": "Seven",
+    "name": "Seven of Silver Blades",
+    "image": "cards/silver-blades/seven.jpg",
+    "keywords": [
+      "strategy",
+      "deception",
+      "stealth",
+      "secrecy",
+      "theft",
+      "cunning",
+      "hidden movement",
+      "evasion"
+    ],
+    "core": "Deception, stealth, strategy, theft, secrecy, hidden action.",
+    "visual": "A masked figure slips away from a sleeping court carrying five silver blades, while two remain behind in the moonlight. A raven watches from a broken arch.",
+    "upright": "Not every truth announces itself. This card is strategy, stealth, deception, hidden movement, and the intelligence of acting where open confrontation would be foolish. The Seven of Silver Blades asks whether secrecy is protecting you or corrupting you.",
+    "verdict": "A stolen blade cuts just as cleanly as an inherited one.",
+    "reversed": "Deception curdles into betrayal. This card may show exposure, lies collapsing, cowardice, theft, manipulation, treachery, or a strategy so clever it devours the strategist.",
+    "reversedKeywords": [
+      "betrayal",
+      "exposure",
+      "lies",
+      "cowardice",
+      "theft",
+      "manipulation",
+      "treachery",
+      "collapse"
+    ],
+    "reversedVerdict": "The thief is always shocked when the shadows learn his name."
+  },
+  {
+    "id": "blades-eight",
+    "sort": 8,
+    "roman": "Eight",
+    "name": "Eight of Silver Blades",
+    "image": "cards/silver-blades/eight.jpg",
+    "keywords": [
+      "restriction",
+      "fear",
+      "mental prison",
+      "helplessness",
+      "limitation",
+      "trapped thought",
+      "anxiety"
+    ],
+    "core": "Restriction, fear, feeling trapped, mental prison, self-limitation.",
+    "visual": "A blindfolded figure stands bound within a circle of eight silver blades. The ropes are loose enough to escape, but fear keeps her still.",
+    "upright": "The prison is real, but not absolute. This card is restriction, fear, mental entrapment, helplessness, and the cruel architecture of thoughts that become walls. The Eight of Silver Blades asks which blade is actually holding you — and which one you only imagine.",
+    "verdict": "The cage was built from blades, but you supplied the lock.",
+    "reversed": "The prison becomes identity. This card may show despair, victimhood, psychological paralysis, self-sabotage, panic, or refusing escape because freedom would require responsibility.",
+    "reversedKeywords": [
+      "despair",
+      "victimhood",
+      "paralysis",
+      "panic",
+      "self-sabotage",
+      "refusal of freedom",
+      "mental collapse"
+    ],
+    "reversedVerdict": "Some prisoners polish the bars because they fear the door."
+  },
+  {
+    "id": "blades-nine",
+    "sort": 9,
+    "roman": "Nine",
+    "name": "Nine of Silver Blades",
+    "image": "cards/silver-blades/nine.jpg",
+    "keywords": [
+      "anxiety",
+      "guilt",
+      "nightmares",
+      "dread",
+      "insomnia",
+      "mental torment",
+      "fear",
+      "anguish"
+    ],
+    "core": "Anxiety, nightmares, guilt, despair, mental anguish.",
+    "visual": "A figure sits awake in a dark bed beneath nine silver blades mounted on the wall. Shadows gather like accusing witnesses.",
+    "upright": "The mind becomes a chamber of knives. This card is anxiety, guilt, nightmares, dread, insomnia, and the torment of thoughts that strike when the world goes quiet. The Nine of Silver Blades does not always mean danger outside you. Sometimes the executioner has learned your voice.",
+    "verdict": "The night did not invent the blade. It merely removed the distractions.",
+    "reversed": "The nightmare deepens into despair, self-hatred, paranoia, breakdown, or secret suffering that festers unseen. This card can also show refusing help because misery has become private religion.",
+    "reversedKeywords": [
+      "despair",
+      "paranoia",
+      "breakdown",
+      "self-hatred",
+      "secret suffering",
+      "torment",
+      "collapse"
+    ],
+    "reversedVerdict": "When the mind becomes a torturer, it knows exactly where you are softest."
+  },
+  {
+    "id": "blades-ten",
+    "sort": 10,
+    "roman": "Ten",
+    "name": "Ten of Silver Blades",
+    "image": "cards/silver-blades/ten.jpg",
+    "keywords": [
+      "ruin",
+      "betrayal",
+      "collapse",
+      "finality",
+      "painful ending",
+      "defeat",
+      "end of denial"
+    ],
+    "core": "Ruin, betrayal, painful ending, collapse, finality.",
+    "visual": "A figure lies beneath ten silver blades under a cold moon. The horizon glows faintly behind them, suggesting the end is final but not meaningless.",
+    "upright": "The final blade has fallen. This card is ruin, betrayal, collapse, painful ending, and the merciful cruelty of knowing that denial is over. The Ten of Silver Blades is brutal, but clear. Something cannot continue. The corpse of the lie is now visible.",
+    "verdict": "There is dignity in an ending that leaves no room for begging.",
+    "reversed": "The ending becomes degradation. This card may show lingering collapse, repeated betrayal, refusing to die cleanly, melodrama, victimhood, or a ruin dragged out because someone fears what follows.",
+    "reversedKeywords": [
+      "lingering ruin",
+      "degradation",
+      "repeated betrayal",
+      "melodrama",
+      "victimhood",
+      "refusal to end"
+    ],
+    "reversedVerdict": "The last blade fell long ago. You are the one still performing the death."
+  },
+  {
+    "id": "blades-acolyte",
+    "sort": 11,
+    "roman": "Acolyte",
+    "name": "Acolyte of Silver Blades",
+    "image": "cards/silver-blades/acolyte.jpg",
+    "keywords": [
+      "curiosity",
+      "observation",
+      "vigilance",
+      "message",
+      "investigation",
+      "alertness",
+      "young intellect"
+    ],
+    "core": "Page of Swords — curiosity, vigilance, messages, observation, mental energy.",
+    "visual": "A young watcher holds a silver dagger before a cracked mirror. Ravens gather nearby. Their eyes are sharp, suspicious, and hungry for truth.",
+    "upright": "The Acolyte is the first student of the blade. This card represents curiosity, observation, messages, alertness, investigation, and the young mind learning that truth can wound.",
+    "verdict": "The first truth is a small blade. It still knows how to draw blood.",
+    "reversed": "Gossip, spying, cruelty through words, paranoia, immature judgment, false accusations, or a person who mistakes suspicion for intelligence.",
+    "reversedKeywords": [
+      "gossip",
+      "spying",
+      "paranoia",
+      "false accusation",
+      "immaturity",
+      "cruel words",
+      "suspicion"
+    ],
+    "reversedVerdict": "A little blade in a foolish hand is still a danger to the room."
+  },
+  {
+    "id": "blades-hunter",
+    "sort": 12,
+    "roman": "Hunter",
+    "name": "Hunter of Silver Blades",
+    "image": "cards/silver-blades/hunter.jpg",
+    "keywords": [
+      "confrontation",
+      "pursuit",
+      "decisive action",
+      "argument",
+      "force",
+      "aggressive truth",
+      "mental speed"
+    ],
+    "core": "Knight of Swords — action, force, argument, ambition, impulsive intellect.",
+    "visual": "A dark rider charges through storm and fog, silver blade drawn, ravens scattering before him.",
+    "upright": "The Hunter pursues truth without waiting for permission. This card represents confrontation, decisive action, argument, aggressive intellect, and the refusal to let a lie escape.",
+    "verdict": "He does not ask whether the truth is ready. He rides until it bleeds.",
+    "reversed": "Reckless accusation, cruelty, verbal violence, impulsive decisions, intellectual arrogance, or charging into conflict because silence feels like weakness.",
+    "reversedKeywords": [
+      "recklessness",
+      "accusation",
+      "verbal violence",
+      "arrogance",
+      "impulsiveness",
+      "cruelty",
+      "conflict"
+    ],
+    "reversedVerdict": "He calls it honesty because brutality sounds less noble."
+  },
+  {
+    "id": "blades-queen",
+    "sort": 13,
+    "roman": "Queen",
+    "name": "Queen of Silver Blades",
+    "image": "cards/silver-blades/queen.jpg",
+    "keywords": [
+      "perception",
+      "independence",
+      "boundaries",
+      "honesty",
+      "intelligence",
+      "discernment",
+      "cold clarity"
+    ],
+    "core": "Queen of Swords — independence, perception, boundaries, honesty, intelligence, grief.",
+    "visual": "Belladonna sits on a cold throne beneath a moonlit window, silver blade upright in one hand, her expression calm enough to frighten.",
+    "upright": "The Queen of Silver Blades is merciless perception. She sees through masks, lies, sentiment, and weakness. She is independent, intelligent, wounded, and unwilling to soften truth for the comfort of fools. This card represents boundaries, clarity, discernment, and the elegance of a mind that cannot be easily deceived.",
+    "verdict": "She does not need to raise her voice. The truth kneels when she enters.",
+    "reversed": "Cruelty, bitterness, emotional coldness, vindictiveness, weaponized intelligence, loneliness disguised as superiority, or a person who cuts because they cannot trust warmth.",
+    "reversedKeywords": [
+      "cruelty",
+      "bitterness",
+      "vindictiveness",
+      "coldness",
+      "superiority",
+      "weaponized truth",
+      "isolation"
+    ],
+    "reversedVerdict": "A frozen heart can still be sharp. That does not make it wise."
+  },
+  {
+    "id": "blades-sovereign",
+    "sort": 14,
+    "roman": "Sovereign",
+    "name": "Sovereign of Silver Blades",
+    "image": "cards/silver-blades/sovereign.jpg",
+    "keywords": [
+      "authority",
+      "judgment",
+      "strategy",
+      "discipline",
+      "intellect",
+      "law",
+      "command",
+      "analysis"
+    ],
+    "core": "King of Swords — authority, intellect, law, judgment, strategy, discipline.",
+    "visual": "A stern ruler sits in a black judicial hall, silver blade across his knees, ravens on the columns, law books and broken masks at his feet.",
+    "upright": "The Sovereign of Silver Blades rules through intellect, law, strategy, and judgment. He is disciplined, analytical, and difficult to deceive. This card represents authority of mind, command of truth, and the power to decide without sentiment.",
+    "verdict": "The ruler of blades does not need rage. A sentence is colder than a scream.",
+    "reversed": "Tyrannical judgment, legal cruelty, intellectual abuse, manipulation, cold domination, corrupt authority, or a mind that uses law as a cage rather than a structure.",
+    "reversedKeywords": [
+      "tyranny",
+      "manipulation",
+      "legal cruelty",
+      "cold domination",
+      "corrupt judgment",
+      "intellectual abuse"
+    ],
+    "reversedVerdict": "When the judge loves the blade more than the truth, every verdict becomes murder."
+  }
+];
+
 const librarySuitInfo = {
   bloodChalices: {
     id: 'bloodChalices',
@@ -922,12 +1360,21 @@ const librarySuitInfo = {
     subtitle: 'Minor Arcana · Wands corrupted through cursed flame',
     motto: 'Every spell changes the hand that casts it.',
     description: 'Cursed Wands are the suit of will, magic, ambition, and fire that has learned to bite. They govern action, passion, leadership, creativity, conquest, conflict, spellcraft, charisma, and the consequences of forcing desire into the world.'
+  },
+  silverBlades: {
+    id: 'silverBlades',
+    title: 'Silver Blades',
+    label: 'Silver Blades',
+    subtitle: 'Minor Arcana · Swords corrupted through moonlit silver',
+    motto: 'The truth is a blade; mercy is only how slowly it enters.',
+    description: 'Silver Blades are the suit of cruel clarity: truth, intellect, strategy, conflict, betrayal, accusation, judgment, and the pain that comes from seeing clearly. In Belladonna’s world, thought becomes a silver weapon — elegant, sacred, and merciless.'
   }
 };
 
 const librarySuitSections = [
   { key: 'bloodChalices', cards: bloodChalicesCards },
-  { key: 'cursedWands', cards: cursedWandsCards }
+  { key: 'cursedWands', cards: cursedWandsCards },
+  { key: 'silverBlades', cards: silverBladesCards }
 ];
 
-const libraryCards = [...cards, ...bloodChalicesCards, ...cursedWandsCards];
+const libraryCards = [...cards, ...bloodChalicesCards, ...cursedWandsCards, ...silverBladesCards];

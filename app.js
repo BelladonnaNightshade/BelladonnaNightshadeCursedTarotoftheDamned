@@ -138,6 +138,7 @@ function suitLabelForCard(card) {
   if (!card.id) return '';
   if (card.id.startsWith('blood-')) return 'Blood Chalices';
   if (card.id.startsWith('wands-')) return 'Cursed Wands';
+  if (card.id.startsWith('blades-')) return 'Silver Blades';
   return 'Minor Arcana';
 }
 
