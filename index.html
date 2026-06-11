@@ -22,7 +22,21 @@
   <link rel="stylesheet" href="styles.css?v=full-deck-options1" />
 </head>
 <body>
-  <div class="backdrop"></div>
+  <div class="tarot-sound-gate" id="tarotSoundGate" role="dialog" aria-modal="true" aria-labelledby="tarotSoundGateTitle">
+    <div class="tarot-sound-panel">
+      <p class="eyebrow">Audio Ritual // Optional</p>
+      <h2 id="tarotSoundGateTitle">Enter the Cursed Tarot</h2>
+      <p>Begin the reading with a sad Celtic chapel lament, or enter in silence.</p>
+      <div class="tarot-sound-actions">
+        <button class="btn primary" id="enterWithMusic" type="button">Enter With Music</button>
+        <button class="btn ghost" id="enterSilent" type="button">Silent Reading</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="tarot-sound-toggle" id="tarotSoundToggle" type="button" aria-pressed="false" hidden>Music Off</button>
+
+    <div class="backdrop"></div>
 
   <header class="hero">
     <div class="hero-copy">

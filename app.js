@@ -227,3 +227,80 @@ function updateReadingSettingsNote() {
 updateReadingSettingsNote();
 renderSpreads();
 renderLibrary();
+
+
+/* Tarot background music gate
+   Uses a two-song playlist:
+   assets/audio/moonlit-chapel.mp3
+   assets/audio/moonlit-chapel-2.mp3
+*/
+const tarotMusicTracks = [
+  'assets/audio/moonlit-chapel.mp3',
+  'assets/audio/moonlit-chapel-2.mp3'
+];
+
+let tarotMusicIndex = 0;
+let tarotMusicAudio = null;
+let tarotMusicEnabled = false;
+
+function setupTarotMusic() {
+  const gate = document.getElementById('tarotSoundGate');
+  const enterWithMusic = document.getElementById('enterWithMusic');
+  const enterSilent = document.getElementById('enterSilent');
+  const toggle = document.getElementById('tarotSoundToggle');
+
+  if (!gate || !enterWithMusic || !enterSilent || !toggle) return;
+
+  tarotMusicAudio = new Audio(tarotMusicTracks[tarotMusicIndex]);
+  tarotMusicAudio.preload = 'auto';
+  tarotMusicAudio.volume = 0.22;
+
+  tarotMusicAudio.addEventListener('ended', () => {
+    if (!tarotMusicEnabled) return;
+    tarotMusicIndex = (tarotMusicIndex + 1) % tarotMusicTracks.length;
+    tarotMusicAudio.src = tarotMusicTracks[tarotMusicIndex];
+    tarotMusicAudio.play().catch(() => {
+      tarotMusicEnabled = false;
+      toggle.textContent = 'Music Off';
+      toggle.setAttribute('aria-pressed', 'false');
+    });
+  });
+
+  function closeGate() {
+    gate.hidden = true;
+    toggle.hidden = false;
+  }
+
+  function setMusicState(enabled) {
+    tarotMusicEnabled = enabled;
+    toggle.textContent = enabled ? 'Music On' : 'Music Off';
+    toggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+
+    if (enabled) {
+      tarotMusicAudio.play().catch(() => {
+        tarotMusicEnabled = false;
+        toggle.textContent = 'Music Off';
+        toggle.setAttribute('aria-pressed', 'false');
+      });
+    } else if (tarotMusicAudio) {
+      tarotMusicAudio.pause();
+    }
+  }
+
+  enterWithMusic.addEventListener('click', () => {
+    closeGate();
+    setMusicState(true);
+  });
+
+  enterSilent.addEventListener('click', () => {
+    closeGate();
+    setMusicState(false);
+  });
+
+  toggle.addEventListener('click', () => {
+    setMusicState(!tarotMusicEnabled);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', setupTarotMusic);
+
