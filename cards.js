@@ -1,26 +1,26 @@
 const cards = [
-  {number:0,roman:'0',name:'The Fool',image:'cards/0 The Fool.png',keywords:['beginnings','risk','innocence','abyss'],upright:'The first step into danger. A new path opens, but it will not flatter your intelligence. Sometimes only the reckless escape the prison built by the cautious.',reversed:'Stupidity wearing a flower crown: blind confidence, childish denial, gullibility, humiliation, and avoidable disaster.',verdict:'Step forward. But do not insult the abyss by pretending it is not there.',reversedVerdict:'The fall will not become wisdom simply because you smiled on the way down.'},
-  {number:1,roman:'I',name:'The Magician',image:'cards/1 The magician.png',keywords:['willpower','manifestation','skill','ritual'],upright:'Power made deliberate. The tools are already on the table; the question is whether you have the discipline and audacity to use them.',reversed:'Talent gone rotten: manipulation, fraud, wasted gifts, scattered will, cheap tricks, and false mastery.',verdict:'You have the knife, the chalice, the coin, and the wand. Stop admiring the altar and begin the spell.',reversedVerdict:'A trick is not a miracle simply because the victim applauds.'},
-  {number:2,roman:'II',name:'The High Priestess',image:'cards/2 The High Priestess.png',keywords:['mystery','intuition','secrets','silence'],upright:'Forbidden knowing. The visible world is only the surface, and secrets are a form of power.',reversed:'Corrupted secrecy: self-deception, hidden poison, ignored instinct, and secrets weaponized against you.',verdict:'The truth is already in the room. Become quiet enough to stop insulting it.',reversedVerdict:'You did not fail because the signs were absent. You failed because they were unpleasant.'},
-  {number:3,roman:'III',name:'The Empress',image:'cards/3 The Empress.png',keywords:['fertility','sexuality','abundance','dark feminine'],upright:'Dark feminine power in fertile, sensual, dangerous fullness. Beauty that creates, desire that commands, and abundance that knows its worth.',reversed:'Poisoned femininity: cruelty disguised as care, sexuality used as punishment, envy, withholding, and devouring control.',verdict:'Your body, your beauty, your hunger, your tenderness, and your power are not separate things.',reversedVerdict:'The garden is not dead. It is being starved by the one who claims to tend it.'},
-  {number:4,roman:'IV',name:'The Emperor',image:'cards/4 The Emperor.png',keywords:['authority','influence','structure','control'],upright:'The architecture of power. Visible and invisible authorities shape your life; learn where power sits, how it speaks, and what it wants.',reversed:'Destructive authority operating while you remain blind: manipulation, domination disguised as protection, corrupt systems, and hidden chains.',verdict:'Power is already touching your life. Ask who benefits, who commands, and how you can turn the machinery toward yourself.',reversedVerdict:'You are not free simply because no one has told you where the leash is tied.'},
-  {number:5,roman:'V',name:'The Hierophant',image:'cards/5 The Hierophant.png',keywords:['belief','doctrine','ritual','masks'],upright:'The theater of belief. Religion, tradition, titles, costumes, and sacred language shape behavior and can become leverage.',reversed:'False belief turned destructive: hypocrisy, spiritual fraud, moral theater, cultish obedience, and fake virtue used as a weapon.',verdict:'The robes matter because people obey them as if they are true.',reversedVerdict:'Beware the holy man who needs you kneeling before he can feel tall.'},
-  {number:6,roman:'VI',name:'The Lovers',image:'cards/6 The Lovers.png',keywords:['desire','choice','temptation','union'],upright:'The dangerous holiness of desire. Love reveals what you worship and what you may surrender for union.',reversed:'Desire turned diseased: obsession, betrayal, false soulmates, emotional addiction, and possession mistaken for love.',verdict:'Love is never harmless. It reveals what you would kneel for.',reversedVerdict:'Not every chain is ugly. Some are kissed onto the throat.'},
-  {number:7,roman:'VII',name:'The Chariot',image:'cards/7 The Chariot.png',keywords:['victory','discipline','conquest','control'],upright:'Domination through discipline. Opposing forces pull against each other; victory belongs to the one who can hold the reins.',reversed:'Loss of control: ambition becoming chaos, pride becoming collapse, emotional stampede, and movement without direction.',verdict:'Do not wait for your beasts to agree. Harness them and advance.',reversedVerdict:'You called yourself the driver because you were too frightened to admit you were cargo.'},
-  {number:8,roman:'VIII',name:'Strength',image:'cards/8 Strength.png',keywords:['courage','restraint','hunger','mastery'],upright:'The beast made to bow without being broken. Hunger mastered, rage trained, sexuality understood, and power made elegant.',reversed:'The beast loose in the house: cruelty, cowardice, sexual malice, brutality, and weakness disguised as domination.',verdict:'The beast is not your enemy. Your weakness is thinking it must either be killed or obeyed.',reversedVerdict:'Only the weak need to prove they have teeth every time they enter a room.'},
-  {number:9,roman:'IX',name:'The Hermit',image:'cards/9 The Hermit.png',keywords:['solitude','wisdom','study','exile'],upright:'Solitude chosen for power. Forbidden study, occult discipline, and distance from the shallow theater of other people.',reversed:'Isolation turned poisonous: bitterness, paranoia, loneliness, spiritual decay, and contempt mistaken for wisdom.',verdict:'Leave the crowd to its warmth. Some truths only approach when the room has gone cold.',reversedVerdict:'A locked door is not a monastery simply because you are alone behind it.'},
-  {number:10,roman:'X',name:'Wheel of Fortune',image:'cards/10 Wheel of Fortune.png',keywords:['fate','cycles','luck','timing'],upright:'The machinery of fate turning without asking who is ready. Luck is real, but so is timing.',reversed:'Fate curdled into misfortune: repeated ruin, bad timing, cursed patterns, and lessons returning because you refused to learn.',verdict:'The wheel does not care whether you deserve the height or the fall. Learn when to move.',reversedVerdict:'This is not fate persecuting you. This is the lesson returning with sharper teeth.'},
-  {number:11,roman:'XI',name:'Justice',image:'cards/11 Justice.png',keywords:['law','judgment','consequence','false fairness'],upright:'The lie society tells about itself so the powerful can sleep well. Recognize the game and learn how the scales are weighted.',reversed:'The full horror of corrupt mankind pretending to be righteous: false accusation, rigged systems, and laws used as weapons.',verdict:'Do not worship the scales. Learn who forged them, who holds them, and how much blood it takes to tip them.',reversedVerdict:'When wolves build the courthouse, do not be shocked when the sheep are found guilty.'},
-  {number:12,roman:'XII',name:'The Hanged One',image:'cards/12 The Hanged One.png',keywords:['surrender','sacrifice','reversal','perspective'],upright:'Power in suspension. Bondage can reveal what freedom hides, and punishment may become revelation.',reversed:'Meaningless suffering: martyrdom without wisdom, paralysis, humiliation, cowardly delay, and sacrifice to gods not listening.',verdict:'Stop struggling for one moment. The rope may be teaching you what the road refused to say.',reversedVerdict:'Not every crucifixion produces a saint. Some only produce a corpse with excuses.'},
-  {number:13,roman:'XIII',name:'Death',image:'cards/13 Death.png',keywords:['mortality','transformation','endings','truth'],upright:'The great honest card. Everything ends; to live with this knowledge is not weakness, but freedom.',reversed:'Mortal despair: decay, helplessness, clinging, dread, and the unbearable knowledge that change comes without your permission.',verdict:'You are dying. So is everyone who ever frightened you. Let that knowledge make you dangerous.',reversedVerdict:'The corpse you refuse to bury has begun to smell like your own future.'},
-  {number:14,roman:'XIV',name:'Temperance',image:'cards/14 Temperance.png',keywords:['balance','alchemy','restraint','mixture'],upright:'The dangerous craft of controlled mixture: blood and water, mercy and threat, hunger and restraint, poison and cure.',reversed:'Contamination: addiction, excess, instability, corrupted healing, and vile mixtures that should never have shared the cup.',verdict:'Even poison becomes medicine when measured by a steady hand.',reversedVerdict:'You did not create a potion. You made a wound drinkable.'},
-  {number:15,roman:'XV',name:'The Devil',image:'cards/15 The Devil.png',keywords:['temptation','bondage','appetite','shadow'],upright:'The chain you secretly enjoy. Name what owns you; once visible, a chain may be used, broken, tightened, or moved.',reversed:'Degradation without glamour: enslavement, addiction, corruption, humiliation, shame, and moral collapse.',verdict:'Do not be ashamed of the chain. Be ashamed that you called it freedom because it glittered.',reversedVerdict:'The leash is no longer decorative. It is all that remains of your will.'},
-  {number:16,roman:'XVI',name:'The Tower',image:'cards/16 The Tower.png',keywords:['collapse','revelation','disaster','exposure'],upright:'The mercy of catastrophe. What was false can no longer stand; what was arrogant can no longer pretend to be eternal.',reversed:'Disaster delayed or denied: smoke inside the building, slow ruin, suppressed crisis, and fear pretending to be stability.',verdict:'Do not mourn the tower too quickly. Ask what it was hiding from the sky.',reversedVerdict:'The tower has already fallen. You are merely living in the dust before it reaches your lungs.'},
-  {number:17,roman:'XVII',name:'The Star',image:'cards/17 The Star.png',keywords:['hope','renewal','healing','defiance'],upright:'Hope after devastation. Not naive optimism, but the luminous power of continuing after the world has shown its teeth.',reversed:'Hope curdled into mockery: despair, false inspiration, humiliation, spiritual exhaustion, and light that may not be salvation.',verdict:'Hope is most beautiful when it knows exactly how much blood has been spilled and still refuses to die.',reversedVerdict:'Not every light is a star. Some are only the eyes of things waiting in the dark.'},
-  {number:18,roman:'XVIII',name:'The Moon',image:'cards/18 The Moon.png',keywords:['illusion','dreams','fear','subconscious'],upright:'The kingdom of uncertainty. The Moon reveals through distortion: instinct, dream, fear, prophecy, and half-truth.',reversed:'Madness without poetry: delusion, paranoia, gaslighting, nightmare logic, and the collapse of trust in your own perception.',verdict:'The night is not empty. It is crowded with everything daylight taught you to ignore.',reversedVerdict:'When every shadow looks like a monster, ask which monster taught you to see that way.'},
-  {number:19,roman:'XIX',name:'The Sun',image:'cards/19 The Sun.png',keywords:['clarity','triumph','exposure','radiance'],upright:'Revelation without mercy. Triumph under light so bright that lies cannot survive, but visibility has a price.',reversed:'Light turned cruel: exposure, arrogance, humiliation, forced joy, burnout, and being seen without being understood.',verdict:'Shine if you must. But remember: every bright thing teaches the hunters where to aim.',reversedVerdict:'The same light that crowns you can also strip you bare.'},
-  {number:20,roman:'XX',name:'Judgement',image:'cards/20 Judgement.png',keywords:['reckoning','awakening','verdict','summons'],upright:'The summons you cannot ignore. The past rises and demands an answer; excuses rot away.',reversed:'Condemnation without redemption: guilt, denial, damnation, disgrace, and the past returning as punishment.',verdict:'The grave has opened. Decide whether you are rising as witness, judge, or evidence.',reversedVerdict:'The trumpet did not call you to rise. It called the witnesses to identify the body.'},
-  {number:21,roman:'XXI',name:'The World',image:'cards/21 The World.png',keywords:['completion','mastery','dominion','integration'],upright:'Completion as power integrated. The journey changed you; the crown belongs to the one who survived the circle.',reversed:'The unfinished soul: false closure, emptiness after success, fragmentation, and a victory that tastes like ash.',verdict:'You survived the circle. Now decide whether you will leave it healed, crowned, or hungry.',reversedVerdict:'You reached the final door and discovered you brought every prison with you.'}
+  {number:0,roman:'0',name:'The Fool',image:'cards/0 The Fool.webp',keywords:['beginnings','risk','innocence','abyss'],upright:'The first step into danger. A new path opens, but it will not flatter your intelligence. Sometimes only the reckless escape the prison built by the cautious.',reversed:'Stupidity wearing a flower crown: blind confidence, childish denial, gullibility, humiliation, and avoidable disaster.',verdict:'Step forward. But do not insult the abyss by pretending it is not there.',reversedVerdict:'The fall will not become wisdom simply because you smiled on the way down.'},
+  {number:1,roman:'I',name:'The Magician',image:'cards/1 The magician.webp',keywords:['willpower','manifestation','skill','ritual'],upright:'Power made deliberate. The tools are already on the table; the question is whether you have the discipline and audacity to use them.',reversed:'Talent gone rotten: manipulation, fraud, wasted gifts, scattered will, cheap tricks, and false mastery.',verdict:'You have the knife, the chalice, the coin, and the wand. Stop admiring the altar and begin the spell.',reversedVerdict:'A trick is not a miracle simply because the victim applauds.'},
+  {number:2,roman:'II',name:'The High Priestess',image:'cards/2 The High Priestess.webp',keywords:['mystery','intuition','secrets','silence'],upright:'Forbidden knowing. The visible world is only the surface, and secrets are a form of power.',reversed:'Corrupted secrecy: self-deception, hidden poison, ignored instinct, and secrets weaponized against you.',verdict:'The truth is already in the room. Become quiet enough to stop insulting it.',reversedVerdict:'You did not fail because the signs were absent. You failed because they were unpleasant.'},
+  {number:3,roman:'III',name:'The Empress',image:'cards/3 The Empress.webp',keywords:['fertility','sexuality','abundance','dark feminine'],upright:'Dark feminine power in fertile, sensual, dangerous fullness. Beauty that creates, desire that commands, and abundance that knows its worth.',reversed:'Poisoned femininity: cruelty disguised as care, sexuality used as punishment, envy, withholding, and devouring control.',verdict:'Your body, your beauty, your hunger, your tenderness, and your power are not separate things.',reversedVerdict:'The garden is not dead. It is being starved by the one who claims to tend it.'},
+  {number:4,roman:'IV',name:'The Emperor',image:'cards/4 The Emperor.webp',keywords:['authority','influence','structure','control'],upright:'The architecture of power. Visible and invisible authorities shape your life; learn where power sits, how it speaks, and what it wants.',reversed:'Destructive authority operating while you remain blind: manipulation, domination disguised as protection, corrupt systems, and hidden chains.',verdict:'Power is already touching your life. Ask who benefits, who commands, and how you can turn the machinery toward yourself.',reversedVerdict:'You are not free simply because no one has told you where the leash is tied.'},
+  {number:5,roman:'V',name:'The Hierophant',image:'cards/5 The Hierophant.webp',keywords:['belief','doctrine','ritual','masks'],upright:'The theater of belief. Religion, tradition, titles, costumes, and sacred language shape behavior and can become leverage.',reversed:'False belief turned destructive: hypocrisy, spiritual fraud, moral theater, cultish obedience, and fake virtue used as a weapon.',verdict:'The robes matter because people obey them as if they are true.',reversedVerdict:'Beware the holy man who needs you kneeling before he can feel tall.'},
+  {number:6,roman:'VI',name:'The Lovers',image:'cards/6 The Lovers.webp',keywords:['desire','choice','temptation','union'],upright:'The dangerous holiness of desire. Love reveals what you worship and what you may surrender for union.',reversed:'Desire turned diseased: obsession, betrayal, false soulmates, emotional addiction, and possession mistaken for love.',verdict:'Love is never harmless. It reveals what you would kneel for.',reversedVerdict:'Not every chain is ugly. Some are kissed onto the throat.'},
+  {number:7,roman:'VII',name:'The Chariot',image:'cards/7 The Chariot.webp',keywords:['victory','discipline','conquest','control'],upright:'Domination through discipline. Opposing forces pull against each other; victory belongs to the one who can hold the reins.',reversed:'Loss of control: ambition becoming chaos, pride becoming collapse, emotional stampede, and movement without direction.',verdict:'Do not wait for your beasts to agree. Harness them and advance.',reversedVerdict:'You called yourself the driver because you were too frightened to admit you were cargo.'},
+  {number:8,roman:'VIII',name:'Strength',image:'cards/8 Strength.webp',keywords:['courage','restraint','hunger','mastery'],upright:'The beast made to bow without being broken. Hunger mastered, rage trained, sexuality understood, and power made elegant.',reversed:'The beast loose in the house: cruelty, cowardice, sexual malice, brutality, and weakness disguised as domination.',verdict:'The beast is not your enemy. Your weakness is thinking it must either be killed or obeyed.',reversedVerdict:'Only the weak need to prove they have teeth every time they enter a room.'},
+  {number:9,roman:'IX',name:'The Hermit',image:'cards/9 The Hermit.webp',keywords:['solitude','wisdom','study','exile'],upright:'Solitude chosen for power. Forbidden study, occult discipline, and distance from the shallow theater of other people.',reversed:'Isolation turned poisonous: bitterness, paranoia, loneliness, spiritual decay, and contempt mistaken for wisdom.',verdict:'Leave the crowd to its warmth. Some truths only approach when the room has gone cold.',reversedVerdict:'A locked door is not a monastery simply because you are alone behind it.'},
+  {number:10,roman:'X',name:'Wheel of Fortune',image:'cards/10 Wheel of Fortune.webp',keywords:['fate','cycles','luck','timing'],upright:'The machinery of fate turning without asking who is ready. Luck is real, but so is timing.',reversed:'Fate curdled into misfortune: repeated ruin, bad timing, cursed patterns, and lessons returning because you refused to learn.',verdict:'The wheel does not care whether you deserve the height or the fall. Learn when to move.',reversedVerdict:'This is not fate persecuting you. This is the lesson returning with sharper teeth.'},
+  {number:11,roman:'XI',name:'Justice',image:'cards/11 Justice.webp',keywords:['law','judgment','consequence','false fairness'],upright:'The lie society tells about itself so the powerful can sleep well. Recognize the game and learn how the scales are weighted.',reversed:'The full horror of corrupt mankind pretending to be righteous: false accusation, rigged systems, and laws used as weapons.',verdict:'Do not worship the scales. Learn who forged them, who holds them, and how much blood it takes to tip them.',reversedVerdict:'When wolves build the courthouse, do not be shocked when the sheep are found guilty.'},
+  {number:12,roman:'XII',name:'The Hanged One',image:'cards/12 The Hanged One.webp',keywords:['surrender','sacrifice','reversal','perspective'],upright:'Power in suspension. Bondage can reveal what freedom hides, and punishment may become revelation.',reversed:'Meaningless suffering: martyrdom without wisdom, paralysis, humiliation, cowardly delay, and sacrifice to gods not listening.',verdict:'Stop struggling for one moment. The rope may be teaching you what the road refused to say.',reversedVerdict:'Not every crucifixion produces a saint. Some only produce a corpse with excuses.'},
+  {number:13,roman:'XIII',name:'Death',image:'cards/13 Death.webp',keywords:['mortality','transformation','endings','truth'],upright:'The great honest card. Everything ends; to live with this knowledge is not weakness, but freedom.',reversed:'Mortal despair: decay, helplessness, clinging, dread, and the unbearable knowledge that change comes without your permission.',verdict:'You are dying. So is everyone who ever frightened you. Let that knowledge make you dangerous.',reversedVerdict:'The corpse you refuse to bury has begun to smell like your own future.'},
+  {number:14,roman:'XIV',name:'Temperance',image:'cards/14 Temperance.webp',keywords:['balance','alchemy','restraint','mixture'],upright:'The dangerous craft of controlled mixture: blood and water, mercy and threat, hunger and restraint, poison and cure.',reversed:'Contamination: addiction, excess, instability, corrupted healing, and vile mixtures that should never have shared the cup.',verdict:'Even poison becomes medicine when measured by a steady hand.',reversedVerdict:'You did not create a potion. You made a wound drinkable.'},
+  {number:15,roman:'XV',name:'The Devil',image:'cards/15 The Devil.webp',keywords:['temptation','bondage','appetite','shadow'],upright:'The chain you secretly enjoy. Name what owns you; once visible, a chain may be used, broken, tightened, or moved.',reversed:'Degradation without glamour: enslavement, addiction, corruption, humiliation, shame, and moral collapse.',verdict:'Do not be ashamed of the chain. Be ashamed that you called it freedom because it glittered.',reversedVerdict:'The leash is no longer decorative. It is all that remains of your will.'},
+  {number:16,roman:'XVI',name:'The Tower',image:'cards/16 The Tower.webp',keywords:['collapse','revelation','disaster','exposure'],upright:'The mercy of catastrophe. What was false can no longer stand; what was arrogant can no longer pretend to be eternal.',reversed:'Disaster delayed or denied: smoke inside the building, slow ruin, suppressed crisis, and fear pretending to be stability.',verdict:'Do not mourn the tower too quickly. Ask what it was hiding from the sky.',reversedVerdict:'The tower has already fallen. You are merely living in the dust before it reaches your lungs.'},
+  {number:17,roman:'XVII',name:'The Star',image:'cards/17 The Star.webp',keywords:['hope','renewal','healing','defiance'],upright:'Hope after devastation. Not naive optimism, but the luminous power of continuing after the world has shown its teeth.',reversed:'Hope curdled into mockery: despair, false inspiration, humiliation, spiritual exhaustion, and light that may not be salvation.',verdict:'Hope is most beautiful when it knows exactly how much blood has been spilled and still refuses to die.',reversedVerdict:'Not every light is a star. Some are only the eyes of things waiting in the dark.'},
+  {number:18,roman:'XVIII',name:'The Moon',image:'cards/18 The Moon.webp',keywords:['illusion','dreams','fear','subconscious'],upright:'The kingdom of uncertainty. The Moon reveals through distortion: instinct, dream, fear, prophecy, and half-truth.',reversed:'Madness without poetry: delusion, paranoia, gaslighting, nightmare logic, and the collapse of trust in your own perception.',verdict:'The night is not empty. It is crowded with everything daylight taught you to ignore.',reversedVerdict:'When every shadow looks like a monster, ask which monster taught you to see that way.'},
+  {number:19,roman:'XIX',name:'The Sun',image:'cards/19 The Sun.webp',keywords:['clarity','triumph','exposure','radiance'],upright:'Revelation without mercy. Triumph under light so bright that lies cannot survive, but visibility has a price.',reversed:'Light turned cruel: exposure, arrogance, humiliation, forced joy, burnout, and being seen without being understood.',verdict:'Shine if you must. But remember: every bright thing teaches the hunters where to aim.',reversedVerdict:'The same light that crowns you can also strip you bare.'},
+  {number:20,roman:'XX',name:'Judgement',image:'cards/20 Judgement.webp',keywords:['reckoning','awakening','verdict','summons'],upright:'The summons you cannot ignore. The past rises and demands an answer; excuses rot away.',reversed:'Condemnation without redemption: guilt, denial, damnation, disgrace, and the past returning as punishment.',verdict:'The grave has opened. Decide whether you are rising as witness, judge, or evidence.',reversedVerdict:'The trumpet did not call you to rise. It called the witnesses to identify the body.'},
+  {number:21,roman:'XXI',name:'The World',image:'cards/21 The World.webp',keywords:['completion','mastery','dominion','integration'],upright:'Completion as power integrated. The journey changed you; the crown belongs to the one who survived the circle.',reversed:'The unfinished soul: false closure, emptiness after success, fragmentation, and a victory that tastes like ash.',verdict:'You survived the circle. Now decide whether you will leave it healed, crowned, or hungry.',reversedVerdict:'You reached the final door and discovered you brought every prison with you.'}
 ];
 
 const bloodChalicesCards = [
@@ -29,7 +29,7 @@ const bloodChalicesCards = [
     "sort": 1,
     "roman": "Ace",
     "name": "Ace of Blood Chalices",
-    "image": "cards/blood-chalices/ace.jpg",
+    "image": "cards/blood-chalices/ace.webp",
     "keywords": [
       "new desire",
       "emotional awakening",
@@ -61,7 +61,7 @@ const bloodChalicesCards = [
     "sort": 2,
     "roman": "Two",
     "name": "Two of Blood Chalices",
-    "image": "cards/blood-chalices/two.jpg",
+    "image": "cards/blood-chalices/two.webp",
     "keywords": [
       "union",
       "attraction",
@@ -94,7 +94,7 @@ const bloodChalicesCards = [
     "sort": 3,
     "roman": "Three",
     "name": "Three of Blood Chalices",
-    "image": "cards/blood-chalices/three.jpg",
+    "image": "cards/blood-chalices/three.webp",
     "keywords": [
       "celebration",
       "revelry",
@@ -127,7 +127,7 @@ const bloodChalicesCards = [
     "sort": 4,
     "roman": "Four",
     "name": "Four of Blood Chalices",
-    "image": "cards/blood-chalices/four.jpg",
+    "image": "cards/blood-chalices/four.webp",
     "keywords": [
       "apathy",
       "dissatisfaction",
@@ -159,7 +159,7 @@ const bloodChalicesCards = [
     "sort": 5,
     "roman": "Five",
     "name": "Five of Blood Chalices",
-    "image": "cards/blood-chalices/five.jpg",
+    "image": "cards/blood-chalices/five.webp",
     "keywords": [
       "grief",
       "regret",
@@ -191,7 +191,7 @@ const bloodChalicesCards = [
     "sort": 6,
     "roman": "Six",
     "name": "Six of Blood Chalices",
-    "image": "cards/blood-chalices/six.jpg",
+    "image": "cards/blood-chalices/six.webp",
     "keywords": [
       "nostalgia",
       "memory",
@@ -223,7 +223,7 @@ const bloodChalicesCards = [
     "sort": 7,
     "roman": "Seven",
     "name": "Seven of Blood Chalices",
-    "image": "cards/blood-chalices/seven.jpg",
+    "image": "cards/blood-chalices/seven.webp",
     "keywords": [
       "temptation",
       "fantasy",
@@ -255,7 +255,7 @@ const bloodChalicesCards = [
     "sort": 8,
     "roman": "Eight",
     "name": "Eight of Blood Chalices",
-    "image": "cards/blood-chalices/eight.jpg",
+    "image": "cards/blood-chalices/eight.webp",
     "keywords": [
       "departure",
       "withdrawal",
@@ -287,7 +287,7 @@ const bloodChalicesCards = [
     "sort": 9,
     "roman": "Nine",
     "name": "Nine of Blood Chalices",
-    "image": "cards/blood-chalices/nine.jpg",
+    "image": "cards/blood-chalices/nine.webp",
     "keywords": [
       "satisfaction",
       "pleasure",
@@ -320,7 +320,7 @@ const bloodChalicesCards = [
     "sort": 10,
     "roman": "Ten",
     "name": "Ten of Blood Chalices",
-    "image": "cards/blood-chalices/ten.jpg",
+    "image": "cards/blood-chalices/ten.webp",
     "keywords": [
       "belonging",
       "family",
@@ -352,7 +352,7 @@ const bloodChalicesCards = [
     "sort": 11,
     "roman": "Acolyte",
     "name": "Acolyte of Blood Chalices",
-    "image": "cards/blood-chalices/acolyte.jpg",
+    "image": "cards/blood-chalices/acolyte.webp",
     "keywords": [
       "new feeling",
       "message",
@@ -382,7 +382,7 @@ const bloodChalicesCards = [
     "sort": 12,
     "roman": "Hunter",
     "name": "Hunter of Blood Chalices",
-    "image": "cards/blood-chalices/hunter.jpg",
+    "image": "cards/blood-chalices/hunter.webp",
     "keywords": [
       "romance",
       "pursuit",
@@ -413,7 +413,7 @@ const bloodChalicesCards = [
     "sort": 13,
     "roman": "Queen",
     "name": "Queen of Blood Chalices",
-    "image": "cards/blood-chalices/queen.jpg",
+    "image": "cards/blood-chalices/queen.webp",
     "keywords": [
       "emotional mastery",
       "intuition",
@@ -444,7 +444,7 @@ const bloodChalicesCards = [
     "sort": 14,
     "roman": "Sovereign",
     "name": "Sovereign of Blood Chalices",
-    "image": "cards/blood-chalices/sovereign.jpg",
+    "image": "cards/blood-chalices/sovereign.webp",
     "keywords": [
       "emotional authority",
       "maturity",
@@ -479,7 +479,7 @@ const cursedWandsCards = [
     "sort": 1,
     "roman": "Ace",
     "name": "Ace of Cursed Wands",
-    "image": "cards/cursed-wands/ace.jpg",
+    "image": "cards/cursed-wands/ace.webp",
     "keywords": [
       "ignition",
       "ambition",
@@ -510,7 +510,7 @@ const cursedWandsCards = [
     "sort": 2,
     "roman": "Two",
     "name": "Two of Cursed Wands",
-    "image": "cards/cursed-wands/two.jpg",
+    "image": "cards/cursed-wands/two.webp",
     "keywords": [
       "planning",
       "vision",
@@ -540,7 +540,7 @@ const cursedWandsCards = [
     "sort": 3,
     "roman": "Three",
     "name": "Three of Cursed Wands",
-    "image": "cards/cursed-wands/three.jpg",
+    "image": "cards/cursed-wands/three.webp",
     "keywords": [
       "expansion",
       "progress",
@@ -570,7 +570,7 @@ const cursedWandsCards = [
     "sort": 4,
     "roman": "Four",
     "name": "Four of Cursed Wands",
-    "image": "cards/cursed-wands/four.jpg",
+    "image": "cards/cursed-wands/four.webp",
     "keywords": [
       "ceremony",
       "celebration",
@@ -601,7 +601,7 @@ const cursedWandsCards = [
     "sort": 5,
     "roman": "Five",
     "name": "Five of Cursed Wands",
-    "image": "cards/cursed-wands/five.jpg",
+    "image": "cards/cursed-wands/five.webp",
     "keywords": [
       "conflict",
       "rivalry",
@@ -632,7 +632,7 @@ const cursedWandsCards = [
     "sort": 6,
     "roman": "Six",
     "name": "Six of Cursed Wands",
-    "image": "cards/cursed-wands/six.jpg",
+    "image": "cards/cursed-wands/six.webp",
     "keywords": [
       "victory",
       "recognition",
@@ -662,7 +662,7 @@ const cursedWandsCards = [
     "sort": 7,
     "roman": "Seven",
     "name": "Seven of Cursed Wands",
-    "image": "cards/cursed-wands/seven.jpg",
+    "image": "cards/cursed-wands/seven.webp",
     "keywords": [
       "defense",
       "resistance",
@@ -693,7 +693,7 @@ const cursedWandsCards = [
     "sort": 8,
     "roman": "Eight",
     "name": "Eight of Cursed Wands",
-    "image": "cards/cursed-wands/eight.jpg",
+    "image": "cards/cursed-wands/eight.webp",
     "keywords": [
       "speed",
       "momentum",
@@ -724,7 +724,7 @@ const cursedWandsCards = [
     "sort": 9,
     "roman": "Nine",
     "name": "Nine of Cursed Wands",
-    "image": "cards/cursed-wands/nine.jpg",
+    "image": "cards/cursed-wands/nine.webp",
     "keywords": [
       "endurance",
       "resilience",
@@ -755,7 +755,7 @@ const cursedWandsCards = [
     "sort": 10,
     "roman": "Ten",
     "name": "Ten of Cursed Wands",
-    "image": "cards/cursed-wands/ten.jpg",
+    "image": "cards/cursed-wands/ten.webp",
     "keywords": [
       "burden",
       "exhaustion",
@@ -786,7 +786,7 @@ const cursedWandsCards = [
     "sort": 11,
     "roman": "Acolyte",
     "name": "Acolyte of Cursed Wands",
-    "image": "cards/cursed-wands/acolyte.jpg",
+    "image": "cards/cursed-wands/acolyte.webp",
     "keywords": [
       "discovery",
       "enthusiasm",
@@ -816,7 +816,7 @@ const cursedWandsCards = [
     "sort": 12,
     "roman": "Hunter",
     "name": "Hunter of Cursed Wands",
-    "image": "cards/cursed-wands/hunter.jpg",
+    "image": "cards/cursed-wands/hunter.webp",
     "keywords": [
       "action",
       "passion",
@@ -847,7 +847,7 @@ const cursedWandsCards = [
     "sort": 13,
     "roman": "Queen",
     "name": "Queen of Cursed Wands",
-    "image": "cards/cursed-wands/queen.jpg",
+    "image": "cards/cursed-wands/queen.webp",
     "keywords": [
       "charisma",
       "confidence",
@@ -878,7 +878,7 @@ const cursedWandsCards = [
     "sort": 14,
     "roman": "Sovereign",
     "name": "Sovereign of Cursed Wands",
-    "image": "cards/cursed-wands/sovereign.jpg",
+    "image": "cards/cursed-wands/sovereign.webp",
     "keywords": [
       "leadership",
       "mastery",
@@ -912,7 +912,7 @@ const silverBladesCards = [
     "sort": 1,
     "roman": "Ace",
     "name": "Ace of Silver Blades",
-    "image": "cards/silver-blades/ace.jpg",
+    "image": "cards/silver-blades/ace.webp",
     "keywords": [
       "truth",
       "clarity",
@@ -944,7 +944,7 @@ const silverBladesCards = [
     "sort": 2,
     "roman": "Two",
     "name": "Two of Silver Blades",
-    "image": "cards/silver-blades/two.jpg",
+    "image": "cards/silver-blades/two.webp",
     "keywords": [
       "indecision",
       "stalemate",
@@ -974,7 +974,7 @@ const silverBladesCards = [
     "sort": 3,
     "roman": "Three",
     "name": "Three of Silver Blades",
-    "image": "cards/silver-blades/three.jpg",
+    "image": "cards/silver-blades/three.webp",
     "keywords": [
       "heartbreak",
       "betrayal",
@@ -1005,7 +1005,7 @@ const silverBladesCards = [
     "sort": 4,
     "roman": "Four",
     "name": "Four of Silver Blades",
-    "image": "cards/silver-blades/four.jpg",
+    "image": "cards/silver-blades/four.webp",
     "keywords": [
       "rest",
       "recovery",
@@ -1035,7 +1035,7 @@ const silverBladesCards = [
     "sort": 5,
     "roman": "Five",
     "name": "Five of Silver Blades",
-    "image": "cards/silver-blades/five.jpg",
+    "image": "cards/silver-blades/five.webp",
     "keywords": [
       "conflict",
       "hollow victory",
@@ -1066,7 +1066,7 @@ const silverBladesCards = [
     "sort": 6,
     "roman": "Six",
     "name": "Six of Silver Blades",
-    "image": "cards/silver-blades/six.jpg",
+    "image": "cards/silver-blades/six.webp",
     "keywords": [
       "transition",
       "departure",
@@ -1097,7 +1097,7 @@ const silverBladesCards = [
     "sort": 7,
     "roman": "Seven",
     "name": "Seven of Silver Blades",
-    "image": "cards/silver-blades/seven.jpg",
+    "image": "cards/silver-blades/seven.webp",
     "keywords": [
       "strategy",
       "deception",
@@ -1130,7 +1130,7 @@ const silverBladesCards = [
     "sort": 8,
     "roman": "Eight",
     "name": "Eight of Silver Blades",
-    "image": "cards/silver-blades/eight.jpg",
+    "image": "cards/silver-blades/eight.webp",
     "keywords": [
       "restriction",
       "fear",
@@ -1161,7 +1161,7 @@ const silverBladesCards = [
     "sort": 9,
     "roman": "Nine",
     "name": "Nine of Silver Blades",
-    "image": "cards/silver-blades/nine.jpg",
+    "image": "cards/silver-blades/nine.webp",
     "keywords": [
       "anxiety",
       "guilt",
@@ -1193,7 +1193,7 @@ const silverBladesCards = [
     "sort": 10,
     "roman": "Ten",
     "name": "Ten of Silver Blades",
-    "image": "cards/silver-blades/ten.jpg",
+    "image": "cards/silver-blades/ten.webp",
     "keywords": [
       "ruin",
       "betrayal",
@@ -1223,7 +1223,7 @@ const silverBladesCards = [
     "sort": 11,
     "roman": "Acolyte",
     "name": "Acolyte of Silver Blades",
-    "image": "cards/silver-blades/acolyte.jpg",
+    "image": "cards/silver-blades/acolyte.webp",
     "keywords": [
       "curiosity",
       "observation",
@@ -1254,7 +1254,7 @@ const silverBladesCards = [
     "sort": 12,
     "roman": "Hunter",
     "name": "Hunter of Silver Blades",
-    "image": "cards/silver-blades/hunter.jpg",
+    "image": "cards/silver-blades/hunter.webp",
     "keywords": [
       "confrontation",
       "pursuit",
@@ -1285,7 +1285,7 @@ const silverBladesCards = [
     "sort": 13,
     "roman": "Queen",
     "name": "Queen of Silver Blades",
-    "image": "cards/silver-blades/queen.jpg",
+    "image": "cards/silver-blades/queen.webp",
     "keywords": [
       "perception",
       "independence",
@@ -1316,7 +1316,7 @@ const silverBladesCards = [
     "sort": 14,
     "roman": "Sovereign",
     "name": "Sovereign of Silver Blades",
-    "image": "cards/silver-blades/sovereign.jpg",
+    "image": "cards/silver-blades/sovereign.webp",
     "keywords": [
       "authority",
       "judgment",
@@ -1350,7 +1350,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 1,
     "roman": "Ace",
     "name": "Ace of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/ace.jpg",
+    "image": "cards/pentacles-of-the-grave/ace.webp",
     "keywords": [
       "opportunity",
       "money",
@@ -1382,7 +1382,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 2,
     "roman": "Two",
     "name": "Two of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/two.jpg",
+    "image": "cards/pentacles-of-the-grave/two.webp",
     "keywords": [
       "balance",
       "adaptation",
@@ -1414,7 +1414,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 3,
     "roman": "Three",
     "name": "Three of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/three.jpg",
+    "image": "cards/pentacles-of-the-grave/three.webp",
     "keywords": [
       "craft",
       "work",
@@ -1445,7 +1445,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 4,
     "roman": "Four",
     "name": "Four of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/four.jpg",
+    "image": "cards/pentacles-of-the-grave/four.webp",
     "keywords": [
       "control",
       "security",
@@ -1476,7 +1476,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 5,
     "roman": "Five",
     "name": "Five of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/five.jpg",
+    "image": "cards/pentacles-of-the-grave/five.webp",
     "keywords": [
       "poverty",
       "hardship",
@@ -1508,7 +1508,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 6,
     "roman": "Six",
     "name": "Six of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/six.jpg",
+    "image": "cards/pentacles-of-the-grave/six.webp",
     "keywords": [
       "charity",
       "patronage",
@@ -1539,7 +1539,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 7,
     "roman": "Seven",
     "name": "Seven of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/seven.jpg",
+    "image": "cards/pentacles-of-the-grave/seven.webp",
     "keywords": [
       "patience",
       "investment",
@@ -1570,7 +1570,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 8,
     "roman": "Eight",
     "name": "Eight of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/eight.jpg",
+    "image": "cards/pentacles-of-the-grave/eight.webp",
     "keywords": [
       "work",
       "skill",
@@ -1602,7 +1602,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 9,
     "roman": "Nine",
     "name": "Nine of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/nine.jpg",
+    "image": "cards/pentacles-of-the-grave/nine.webp",
     "keywords": [
       "luxury",
       "independence",
@@ -1632,7 +1632,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 10,
     "roman": "Ten",
     "name": "Ten of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/ten.jpg",
+    "image": "cards/pentacles-of-the-grave/ten.webp",
     "keywords": [
       "legacy",
       "inheritance",
@@ -1663,7 +1663,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 11,
     "roman": "Acolyte",
     "name": "Acolyte of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/acolyte.jpg",
+    "image": "cards/pentacles-of-the-grave/acolyte.webp",
     "keywords": [
       "study",
       "opportunity",
@@ -1693,7 +1693,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 12,
     "roman": "Hunter",
     "name": "Hunter of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/hunter.jpg",
+    "image": "cards/pentacles-of-the-grave/hunter.webp",
     "keywords": [
       "patience",
       "responsibility",
@@ -1725,7 +1725,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 13,
     "roman": "Queen",
     "name": "Queen of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/queen.jpg",
+    "image": "cards/pentacles-of-the-grave/queen.webp",
     "keywords": [
       "security",
       "luxury",
@@ -1757,7 +1757,7 @@ const pentaclesOfTheGraveCards = [
     "sort": 14,
     "roman": "Sovereign",
     "name": "Sovereign of Pentacles of the Grave",
-    "image": "cards/pentacles-of-the-grave/sovereign.jpg",
+    "image": "cards/pentacles-of-the-grave/sovereign.webp",
     "keywords": [
       "wealth",
       "authority",

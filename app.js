@@ -59,7 +59,7 @@ function renderReading(target, pulls, options = {}) {
         <button class="flip-card ${concealed ? '' : 'revealed'}" ${concealed ? '' : 'data-static="true"'}>
           <div class="flip-inner">
             <div class="flip-face flip-back">
-              <img class="card-back-full" src="assets/card-back.png" alt="Belladonna tarot card back">
+              <img class="card-back-full" src="assets/card-back.webp" alt="Belladonna tarot card back">
               <span class="card-back-reveal">Click to reveal</span>
             </div>
             <div class="flip-face flip-front ${isRev ? 'reversed' : ''}">
