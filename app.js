@@ -81,6 +81,7 @@ function renderReading(target, pulls, options = {}) {
   if (concealed) {
     target.querySelectorAll('.flip-card').forEach(cardEl => {
       cardEl.addEventListener('click', () => {
+        playTarotFlipSound();
         cardEl.classList.add('revealed');
       }, { once: true });
     });
@@ -304,3 +305,55 @@ function setupTarotMusic() {
 
 document.addEventListener('DOMContentLoaded', setupTarotMusic);
 
+
+/* Tarot interface sound effects
+   assets/audio/button-click.mp3
+   assets/audio/card-flip.mp3
+*/
+const tarotSfx = {
+  button: null,
+  flip: null,
+  ready: false
+};
+
+function setupTarotSoundEffects() {
+  tarotSfx.button = new Audio('assets/audio/button-click.mp3');
+  tarotSfx.flip = new Audio('assets/audio/card-flip.mp3');
+
+  tarotSfx.button.preload = 'auto';
+  tarotSfx.flip.preload = 'auto';
+
+  tarotSfx.button.volume = 0.32;
+  tarotSfx.flip.volume = 0.42;
+
+  tarotSfx.ready = true;
+
+  document.addEventListener('click', (event) => {
+    const clickable = event.target.closest('button, a.btn, .spread-card');
+    if (!clickable) return;
+
+    if (clickable.classList.contains('flip-card')) return;
+
+    playTarotButtonSound();
+  }, true);
+}
+
+function playTarotButtonSound() {
+  if (!tarotSfx.ready || !tarotSfx.button) return;
+  try {
+    tarotSfx.button.currentTime = 0;
+    tarotSfx.button.play().catch(() => {});
+  } catch (error) {}
+}
+
+function playTarotFlipSound() {
+  if (!tarotSfx.ready || !tarotSfx.flip) return;
+  try {
+    tarotSfx.flip.currentTime = 0;
+    tarotSfx.flip.play().catch(() => {});
+  } catch (error) {}
+}
+
+
+
+document.addEventListener('DOMContentLoaded', setupTarotSoundEffects);
