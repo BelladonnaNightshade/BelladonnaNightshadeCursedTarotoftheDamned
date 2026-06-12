@@ -361,11 +361,12 @@ document.addEventListener('DOMContentLoaded', setupTarotSoundEffects);
 
 /* Daily Featured Major Arcana / Today’s Omen
    A date-seeded deterministic pick: stable all day, changes automatically tomorrow.
+   Uses the 22 Major Arcana by card number 0–21.
 */
 function getDailyOmenCard() {
   if (typeof cards === 'undefined' || !Array.isArray(cards)) return null;
 
-  const majorArcana = cards.filter((card) => card.arcana === 'Major');
+  const majorArcana = cards.filter((card) => Number.isInteger(card.number) && card.number >= 0 && card.number <= 21);
   if (!majorArcana.length) return null;
 
   const now = new Date();
@@ -385,33 +386,24 @@ function setupDailyOmenCard() {
   const omen = getDailyOmenCard();
   if (!omen) return;
 
-  const image =
-    document.getElementById('dailyOmenImage') ||
-    document.querySelector('[data-daily-omen="image"]') ||
-    document.querySelector('img[src*="13 Death.webp"], img[src*="13%20Death.webp"], img[alt="Death"]');
+  const image = document.getElementById('dailyOmenImage');
+  const name = document.getElementById('dailyOmenName');
+  const description = document.getElementById('dailyOmenDescription');
 
   if (image) {
     image.src = omen.image;
-    image.alt = omen.name;
+    image.alt = `${omen.name} card from Belladonna Nightshade’s Cursed Tarot of the Damned`;
   }
-
-  const name =
-    document.getElementById('dailyOmenName') ||
-    document.querySelector('[data-daily-omen="name"]');
 
   if (name) {
-    name.textContent = omen.name;
+    const roman = omen.roman ? `${omen.roman} — ` : '';
+    name.textContent = `${roman}${omen.name}`;
   }
-
-  const description =
-    document.getElementById('dailyOmenDescription') ||
-    document.querySelector('[data-daily-omen="description"]');
 
   if (description && omen.upright) {
     description.textContent = omen.upright;
   }
 }
-
 
 
 document.addEventListener('DOMContentLoaded', setupDailyOmenCard);
