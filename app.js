@@ -357,3 +357,61 @@ function playTarotFlipSound() {
 
 
 document.addEventListener('DOMContentLoaded', setupTarotSoundEffects);
+
+
+/* Daily Featured Major Arcana / Today’s Omen
+   A date-seeded deterministic pick: stable all day, changes automatically tomorrow.
+*/
+function getDailyOmenCard() {
+  if (typeof cards === 'undefined' || !Array.isArray(cards)) return null;
+
+  const majorArcana = cards.filter((card) => card.arcana === 'Major');
+  if (!majorArcana.length) return null;
+
+  const now = new Date();
+  const dateKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+
+  let hash = 2166136261;
+  for (let i = 0; i < dateKey.length; i++) {
+    hash ^= dateKey.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  const index = (hash >>> 0) % majorArcana.length;
+  return majorArcana[index];
+}
+
+function setupDailyOmenCard() {
+  const omen = getDailyOmenCard();
+  if (!omen) return;
+
+  const image =
+    document.getElementById('dailyOmenImage') ||
+    document.querySelector('[data-daily-omen="image"]') ||
+    document.querySelector('img[src*="13 Death.webp"], img[src*="13%20Death.webp"], img[alt="Death"]');
+
+  if (image) {
+    image.src = omen.image;
+    image.alt = omen.name;
+  }
+
+  const name =
+    document.getElementById('dailyOmenName') ||
+    document.querySelector('[data-daily-omen="name"]');
+
+  if (name) {
+    name.textContent = omen.name;
+  }
+
+  const description =
+    document.getElementById('dailyOmenDescription') ||
+    document.querySelector('[data-daily-omen="description"]');
+
+  if (description && omen.upright) {
+    description.textContent = omen.upright;
+  }
+}
+
+
+
+document.addEventListener('DOMContentLoaded', setupDailyOmenCard);
